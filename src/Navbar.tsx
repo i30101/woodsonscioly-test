@@ -14,6 +14,7 @@ import ReactDOM from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
+import './css/Navbar.css'
 
 const Navbar = () => {
     return (
@@ -56,7 +57,7 @@ const Navbar = () => {
             </nav>
         
         </>
-    )
+    );
 }
 
 export default Navbar;

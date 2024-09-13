@@ -1,0 +1,18 @@
+/* 
+Author: Andrew Kim
+Version: 0.0.1
+Since: 12 September 2024
+
+General styles for all files
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background-color: #050c1a !important;
+}

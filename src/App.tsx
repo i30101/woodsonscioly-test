@@ -1,26 +1,42 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './css/App.css';
+/**
+ * @author Andrew Kim
+ * @version 0.0.1
+ * @since 13 September 2024
+ * 
+ * Main app
+ */
 
+
+// styling
+import './css/style.css'
+
+
+// classes
+import React from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from 'react-router-dom'
+
+import Navbar from './Navbar';
+import Home from './home'
+
+
+/**
+ * Web app container
+ * @returns Main app container
+ */
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                Learn React
-                </a>
-            </header>
-        </div>
+        <body>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+            </Routes>
+        </body>
     );
 }
+
 
 export default App;
