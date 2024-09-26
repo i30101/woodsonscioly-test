@@ -7,35 +7,18 @@
  */
 
 
-
-// external libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
 
-// classes
-import App from './App';
 
 
-const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
-);
-
-root.render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>
-);
-
-
-function Index() {
-    return <>home
-    </>
+function Team() {
+    return <>team</>
 }
 
-export default Index;
+export default Team;

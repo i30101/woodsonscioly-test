@@ -16,3 +16,8 @@ General styles for all files
 body {
     background-color: #050c1a !important;
 }
+:root {
+    --background: #050c1a;
+    --primary-dark: #10163b;
+    --primary-light: #4e4ef7;
+}
