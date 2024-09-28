@@ -13,9 +13,8 @@ import React, { ReactNode, useState } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
-import Title from './components/Title';
+import Page from './components/Page';
 import PlacingList from './components/PlacingList';
-import Spacer from './components/Spacer';
 
 import './css/team.css'
 
@@ -252,9 +251,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
 
 function Team() {
     const parentID = "teamAccordion";
-    return <>
-        <Title title="Our" highlight="Team" after="" subtitle="Learn about the coolest Science Olympiad team in VA."></Title>
-        
+    return <Page title="Our" highlight="Team" after="" subtitle="Learn about the coolest Science Olympiad team in VA">        
         <div className="primary-section" data-aos="fade-up">
             <div className="heading-1" data-aos="fade-up">2024-2025 Season Team</div>
             <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
@@ -309,8 +306,7 @@ function Team() {
                 />
             </div>
         </div>
-
-    </>
+    </Page>
 }
 
 export default Team;

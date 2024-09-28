@@ -9,6 +9,10 @@
 
 import React from 'react';
 
+import Navbar from './Navbar';
+import Body from './Body';
+import Footer from './Footer';
+
 
 // styling
 import '../components-css/BlogPage.css'
@@ -25,7 +29,14 @@ interface BlogProps {
 
 const BlogPage: React.FC<BlogProps> = ({title, date, author, image, category}) => {
     return <>
+        <Navbar />
+
         <div className="intro-container"></div>
+        
+        <Body>
+            hi
+        </Body>
+        <Footer />
     </>
 }
 

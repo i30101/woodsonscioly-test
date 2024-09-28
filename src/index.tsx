@@ -20,7 +20,7 @@ import './css/style.css'
 
 // classes
 import App from './App';
-import Title from './components/Title';
+import Page from './components/Page';
 
 
 const root = ReactDOM.createRoot(
@@ -35,13 +35,11 @@ root.render(
 
 
 function Index() {
-    return <>
-        <Title title="C. G. Woodson" highlight="Science Olympiad" after="" subtitle="Pioneers in science, engineering, and inter-disciplinary exploration."></Title>
-
+    return <Page title="C. G. Woodson" highlight="Science Olympiad" after="" subtitle="Pioneers in science, engineering, and inter-disciplinary exploration">
         <div className="primary-section">
             
         </div>
-    </>
+    </Page>
 }
 
 export default Index;

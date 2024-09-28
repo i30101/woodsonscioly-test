@@ -13,18 +13,16 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
-import Title from './components/Title';
 
+import Page from './components/Page';
 
 
 function Tryouts() {
-    return <>
-        <Title title="WSO" highlight="Tryouts" after="" subtitle="Learn about WSO's tryouts system."></Title>
-        
+    return <Page title="WSO" highlight="Tryouts" after="" subtitle="Learn about WSO's tryouts system.">        
         <div className="primary-section">
             
         </div>
-    </>
+    </Page>
 }
 
 export default Tryouts;

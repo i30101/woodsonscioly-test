@@ -15,6 +15,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import './css/blog.css'
 import Title from './components/Title';
+import Page from './components/Page'
 
 
 import georgia from './assets/blog/georgia.jpg'
@@ -40,11 +41,9 @@ const BlogContainer: React.FC<BlogContainerProps> = ({title, date, image, catego
 
 
 function Blog() {
-    return <>
-        <Title title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do."></Title>
-
-        <div className="primary-section row">
-            <BlogContainer
+    return <Page title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do.">
+         <div className="primary-section row">
+             <BlogContainer
                 image={georgia}
                 category="Competitions"
                 title="2025 Georgia Scrimmage Results"
@@ -59,9 +58,8 @@ function Blog() {
                 category="Newsletter"
                 title="September 2024 Newsletter"
                 date="September 10, 2024" />
-            
         </div>
-    </>
+    </Page>
 }
 
 export default Blog;

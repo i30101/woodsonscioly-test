@@ -22,8 +22,7 @@ import nick from './assets/images/nick.jpg'
 import morgan from './assets/images/morgan.jpg'
 import matthew from './assets/images/matthew.jpg'
 
-import Title from './components/Title';
-
+import Page from './components/Page';
 
 interface BioProps {
     name: string;
@@ -48,9 +47,7 @@ const OfficerBio: React.FC<BioProps> = ({name, position, grade, image, children}
 
 
 function Leadership() {
-    return <>
-        <Title title="Our" highlight="Leadership" after="" subtitle="Meet our amazing officers!"></Title>
-
+    return <Page title="Our" highlight="Leadership" after="" subtitle="Meet our amazing officers!">
         <div className="primary-section">
             <OfficerBio
                 name="Andrew Kim"
@@ -101,7 +98,7 @@ function Leadership() {
                 Hello! I'm Morgan, and I'm a senior who loves math and science and staying up late for no reason. It's my third year doing Science Olympiad, and I've loved it ever since I started sophomore year. My favorite thing about scioly is the fun and supportive community. In my free time, you can find me listening to music, solving puzzles, crocheting, and playing bass. I'm looking forward to this year in scioly and what it has in store !
             </OfficerBio>
         </div>
-    </>
+    </Page>
 }
 
 export default Leadership;

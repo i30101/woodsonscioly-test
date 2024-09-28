@@ -21,14 +21,11 @@ import 'aos/dist/aos.css'
 
 
 // classes
-import Navbar from './components/Navbar';
 import Index from './index';
 import Tryouts from './tryouts';
 import Leadership from './leadership';
 import Contribute from './contribute';
 import Team from './team';
-import Body from './components/Body';
-import Footer from './components/Footer';
 import Blog from './blog';
 import Georgia2025 from './blog/georgia2025';
 
@@ -50,19 +47,15 @@ function App() {
     useAos();
     return (
         <Router>
-            <Navbar/>
-            <Body>
-                <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/leadership" element={<Leadership />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/tryouts" element={<Tryouts />} />
-                    <Route path="/contribute" element={<Contribute />} />
-                    <Route path="/blog/georgia2025" element={<Georgia2025 />} />
-                </Routes>
-            </Body>
-            <Footer />
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/leadership" element={<Leadership />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/tryouts" element={<Tryouts />} />
+                <Route path="/contribute" element={<Contribute />} />
+                <Route path="/blog/georgia2025" element={<Georgia2025 />} />
+            </Routes>
         </Router>
     );
 }

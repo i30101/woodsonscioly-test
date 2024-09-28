@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom/client';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import './css/contribute.css'
-import Title from './components/Title';
+import Page from './components/Page';
 import ContactContainer from './components/Contact';
 
 import check from './assets/icons/check.svg'
@@ -80,7 +80,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
             <div className={"donate-element " + name}>{symbol}</div>
             <div className="tier-name">{name} Sponsor</div>
             <div className="price-range">${minCost} - ${maxCost}</div>
-            <a className="btn sign-in-button donate-button" type="submit" href="#footer">Donate now</a>
+            <a className="btn sign-in-button donate-button" type="submit" href="#contact-box">Donate now</a>
             <div className="benefits">{benefitsList}</div>
         </div>
     </div>
@@ -94,9 +94,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
 
 
 function Contribute() {
-    return <>
-        <Title title="" highlight="Contribute" after="to WSO" subtitle=""></Title>
-        
+    return <Page title="" highlight="Contribute" after="to WSO" subtitle="">    
         <div className="primary-section">
             <div className="heading-1" data-aos="fade-up">Sponsorship Levels</div>
 
@@ -132,7 +130,7 @@ function Contribute() {
         </div>
 
         <ContactContainer />
-    </>
+    </Page>
 }
 
 export default Contribute;
