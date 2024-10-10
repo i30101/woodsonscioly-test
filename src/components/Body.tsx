@@ -22,8 +22,6 @@ function Body({ children }: {children: React.ReactNode}) {
     return (
         <div id="body">
             {children}
-
-            <Footer />
         </div>
     );
 }

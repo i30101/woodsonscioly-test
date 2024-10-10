@@ -9,5 +9,7 @@ Footer styles
 
 #footer {
     max-width: 1200px;
-    margin: auto;
+    margin: auto auto 100px auto;
+    padding: 40px 0 0 0;
+    color: var(--text-light);
 }

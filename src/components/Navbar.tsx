@@ -42,19 +42,19 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-md-0">
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Home</a>
+                                <a className="nav-link link" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="team">The Team</a>
+                                <a className="nav-link link" href="team">The Team</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="leadership">Leadership</a>
+                                <a className="nav-link link" href="leadership">Leadership</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="tryouts">Tryouts</a>
+                                <a className="nav-link link" href="tryouts">Tryouts</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="contribute">Contribute</a>
+                                <a className="nav-link link" href="contribute">Contribute</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
