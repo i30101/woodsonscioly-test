@@ -1,2 +1,2 @@
-TODO fix mobile styilng
+TODO fix mobile styling
 TODO figure out how to change animation distance
