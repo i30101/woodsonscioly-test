@@ -19,5 +19,6 @@
 #subtitle {
     color: var(--text-light);
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 18px;
 }

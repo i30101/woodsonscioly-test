@@ -28,7 +28,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid" id="navbar-contents">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand" href="/" data-aos="fade-up" data-aos-delay="0">
                     <img src={cog} id="cog-logo"></img>
                 </a>
 
@@ -40,23 +40,23 @@ function Navbar() {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-md-0">
-                        <li className="nav-item">
+                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
                             <a className="nav-link link" href="/">Home</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
                             <a className="nav-link link" href="team">The Team</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
                             <a className="nav-link link" href="leadership">Leadership</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
                             <a className="nav-link link" href="tryouts">Tryouts</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
                             <a className="nav-link link" href="contribute">Contribute</a>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
+                    <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="0">
                         <button className="btn" id="sign-in-button" type="submit">Log in</button>
                     </form>
                 </div>

@@ -19,7 +19,7 @@ import Title from './components/Title';
 
 function Tryouts() {
     return <>
-        <Title title="WSO" 
+        <Title title="WSO" highlight="Tryouts" after="" subtitle="Learn about WSO's tryouts system."></Title>
     </>
 }
 

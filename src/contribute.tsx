@@ -13,13 +13,13 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
-
+import Title from './components/Title';
 
 
 
 function Contribute() {
     return <>
-        <div>contribute</div>
+        <Title title="" highlight="Contribute" after="to WSO" subtitle=""></Title>
     </>
 }
 

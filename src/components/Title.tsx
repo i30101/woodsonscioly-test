@@ -10,6 +10,7 @@
 
 import '../css/style.css'
 import '../css/Title.css'
+import useAos from '../useAos';
 
 
 interface TitleProps {
@@ -21,13 +22,14 @@ interface TitleProps {
 }
 
 function Title({title, highlight, after, subtitle}: TitleProps) {
+    useAos();
     return (
 
         <div id="intro">
-        <h1 id="title">
+        <h1 data-aos="fade-up" id="title">
             {title} <span id="highlight">{highlight}</span> {after}
         </h1>
-        <h6 id="subtitle">{subtitle}</h6>
+        <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">{subtitle}</h6>
     </div>
     )
 }

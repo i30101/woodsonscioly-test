@@ -34,6 +34,6 @@ body {
     text-decoration: none;
 }
 
-.link:hover, .navlink:active, .navlink:focus {
+.link:hover, .link:active, .link:focus {
     color: var(--primary-light);
 }

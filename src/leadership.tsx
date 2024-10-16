@@ -19,7 +19,7 @@ import Title from './components/Title';
 
 function Leadership() {
     return <>
-        <Title title="Our" highlight="Leadership" after="" subtitle=""></Title>
+        <Title title="Our" highlight="Leadership" after="" subtitle="Meet our amazing officers!"></Title>
     </>
 }
 
