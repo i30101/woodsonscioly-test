@@ -13,13 +13,13 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
-
+import Title from './components/Title';
 
 
 
 function Tryouts() {
     return <>
-        <div>tryouts</div>
+        <Title title="WSO" 
     </>
 }
 

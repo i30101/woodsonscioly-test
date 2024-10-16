@@ -16,10 +16,11 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-
+import './css/style.css'
 
 // classes
 import App from './App';
+import Title from './components/Title';
 
 
 const root = ReactDOM.createRoot(
@@ -34,8 +35,10 @@ root.render(
 
 
 function Index() {
-    return <>home
+    return <>
+        <Title title="C. G. Woodson" highlight="Science Olympiad" after="" subtitle="Pioneers in science, engineering, and inter-disciplinary exploration."></Title>
     </>
+    
 }
 
 export default Index;

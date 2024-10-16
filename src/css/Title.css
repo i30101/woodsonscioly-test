@@ -1,0 +1,23 @@
+#intro {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#title {
+    font-size: 60px;
+    color: white;
+    font-weight: 700;
+}
+
+#highlight {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#subtitle {
+    color: var(--text-light);
+    font-weight: 400;
+    margin-top: 20px;
+}

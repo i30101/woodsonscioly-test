@@ -31,6 +31,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     transition: color 0.5s;
+    text-decoration: none;
 }
 
 .link:hover, .navlink:active, .navlink:focus {

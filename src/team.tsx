@@ -13,12 +13,14 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-
+import Title from './components/Title';
 
 
 
 function Team() {
-    return <>team</>
+    return <>
+        <Title title="Our" highlight="Team" after="" subtitle=""></Title>
+    </>
 }
 
 export default Team;

@@ -13,12 +13,14 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-
+import Title from './components/Title';
 
 
 
 function Leadership() {
-    return <>leadership</>
+    return <>
+        <Title title="Our" highlight="Leadership" after="" subtitle=""></Title>
+    </>
 }
 
 export default Leadership;
