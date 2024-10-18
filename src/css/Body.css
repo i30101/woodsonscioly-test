@@ -10,6 +10,6 @@ Body styles
 #body {
     /* background-color: white; */
     min-height: calc(100vh - 94px);
-    max-width: 1200px;
+    max-width: var(--max-body-width);
     margin: auto;
 }

@@ -1,0 +1,59 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 17 October 2024
+
+Team page styles
+*/
+
+
+:root {
+    --accordion-border: 10px;
+}
+
+
+.accordion-item {
+    margin-bottom: 20px;
+    background-color: var(--box-light);
+    border-radius: var(--accordion-border) !important;
+}
+
+.accordion-button, .accordion-collapse, .accordion-button:hover, .accordion-button:active, .accordion-button:focus {
+    background-color: var(--box-dark);
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed){
+    outline: none;
+    box-shadow: none;
+    background-color: var(--box-light) !important;
+}
+
+.accordion-button {
+    border-radius: var(--accordion-border) !important;
+    font-weight: 800;
+    color: white !important;
+    font-size: 18px;
+    padding: 20px 20px 20px 28px;
+    transition: none;
+    --bs-accordion-btn-icon-transform: rotate(90deg);
+}
+
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+    background-image: url('../assets/site/chevron-right.png');
+}
+
+.accordion-item {
+    border: none !important;
+}
+
+
+.accordion-collapse {
+    background-color: var(--box-light) !important;
+    border-bottom-left-radius: var(--accordion-border);
+    border-bottom-right-radius: var(--accordion-border);
+    padding: 8px 28px 20px 28px;
+    color: white;
+}
+

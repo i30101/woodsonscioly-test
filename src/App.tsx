@@ -13,9 +13,11 @@ import {
     Route,
 } from 'react-router-dom'
 
+import { useEffect } from "react";
+import Aos from 'aos';
 
 // styling
-import './css/style.css'
+import 'aos/dist/aos.css'
 
 
 // classes
@@ -29,11 +31,21 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 
 
+
+
+const useAos = () => {
+    useEffect(() => {
+        Aos.init({ duration: 600, delay: 100})
+    }, []);
+};
+
+
 /**
  * Web app container
  * @returns Main app container
  */
 function App() {
+    useAos();
     return (
         <Router>
             <Navbar/>

@@ -30,6 +30,7 @@ function Navbar() {
             <div className="container-fluid" id="navbar-contents">
                 <a className="navbar-brand" href="/" data-aos="fade-up" data-aos-delay="0">
                     <img src={cog} id="cog-logo"></img>
+                    <span id="logo-text">Woodson Scioly</span>
                 </a>
 
                 <a href="/" className="d-lg-none d-xl-none" id="mobile-title">Woodson Scioly</a>
@@ -39,24 +40,24 @@ function Navbar() {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mb-2 mb-md-0">
-                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
+                    <ul className="navbar-nav mb-2 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                        <li className="nav-item">
                             <a className="nav-link link" href="/">Home</a>
                         </li>
-                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
+                        <li className="nav-item">
                             <a className="nav-link link" href="team">The Team</a>
                         </li>
-                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
+                        <li className="nav-item">
                             <a className="nav-link link" href="leadership">Leadership</a>
                         </li>
-                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
+                        <li className="nav-item">
                             <a className="nav-link link" href="tryouts">Tryouts</a>
                         </li>
-                        <li className="nav-item" data-aos="fade-up" data-aos-delay="0">
+                        <li className="nav-item">
                             <a className="nav-link link" href="contribute">Contribute</a>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="0">
+                    <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="300">
                         <button className="btn" id="sign-in-button" type="submit">Log in</button>
                     </form>
                 </div>

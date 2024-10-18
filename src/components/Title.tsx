@@ -10,7 +10,6 @@
 
 import '../css/style.css'
 import '../css/Title.css'
-import useAos from '../useAos';
 
 
 interface TitleProps {
@@ -18,11 +17,9 @@ interface TitleProps {
     highlight: string;
     after: string;
     subtitle: string;
-
 }
 
 function Title({title, highlight, after, subtitle}: TitleProps) {
-    useAos();
     return (
 
         <div id="intro">

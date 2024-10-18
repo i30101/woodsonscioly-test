@@ -41,16 +41,8 @@ Navbar styles
 }
 
 .nav-link {
-    /* color: white; */
-    /* transition: color 0.5s; */
-    /* font-size: 16px; */
-    /* font-weight: 500; */
     text-align: center;
 }
-
-/* .nav-link:hover, .nav-link:active, .nav-link:focus {
-    color: var(--primary-light);
-} */
 
 #sign-in-button {
     height: 40px;
@@ -72,12 +64,12 @@ Navbar styles
 }
 
 .navbar-toggler-icon {
-    background-image: url(../assets/site/menu.svg) !important;
+    background-image: url('../assets/site/menu.svg') !important;
     border: none;
 }
 
 .navbar-toggler-icon::selection {
-    background-image: url(../assets/site/menu.svg) !important;
+    background-image: url('../assets/site/menu.svg') !important;
 }
 
 
