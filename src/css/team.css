@@ -57,3 +57,46 @@ Team page styles
     color: white;
 }
 
+
+
+/* .team-head, .team-body {
+    width: 800px !important;
+}
+
+td {
+    width: 33.33%;
+} */
+
+/* .team-table {
+    width: 1144px !important;
+}
+
+
+th, td {
+    width: 33.33%;
+
+} */
+
+
+table {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.team-head, .team-data {
+    background-color: transparent !important;
+    color: white !important;
+    border-bottom: none;
+}
+
+.team-head {
+    font-size: 18px;
+}
+
+
+.team-data {
+    padding: 4px !important;
+    font-size: 14px;
+}

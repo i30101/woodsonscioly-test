@@ -30,7 +30,7 @@ function Navbar() {
             <div className="container-fluid" id="navbar-contents">
                 <a className="navbar-brand" href="/" data-aos="fade-up" data-aos-delay="0">
                     <img src={cog} id="cog-logo"></img>
-                    <span id="logo-text">Woodson Scioly</span>
+                    <span className="link" id="logo-text">Woodson Scioly</span>
                 </a>
 
                 <a href="/" className="d-lg-none d-xl-none" id="mobile-title">Woodson Scioly</a>
