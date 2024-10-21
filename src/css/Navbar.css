@@ -7,11 +7,6 @@ Navbar styles
 */
 
 
-/* color pallete */
-
-
-
-
 .navbar {
     background-color: #050c1a !important;
     color: white;
@@ -45,7 +40,7 @@ Navbar styles
     margin: auto;
 }
 
-.nav-link {
+.navbar-link {
     text-align: center;
 }
 
@@ -88,7 +83,7 @@ Navbar styles
         padding: 0px 30px 0px 30px;
     }
 
-    .nav-link {
+    .navbar-link {
         padding: 35px 20px !important;
     }
 }
@@ -98,7 +93,7 @@ Navbar styles
         padding: 10px;
     }
 
-    .nav-link {
+    .navbar-link {
         padding: 12px !important;
     }
 

@@ -7,7 +7,7 @@
  */
 
 
-import React, { Children, ReactElement, useState } from 'react';
+import React, { Children, ReactElement, ReactNode, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 // styling
@@ -15,7 +15,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
 import Title from './components/Title';
-
+import Tablist from './components/Tablist';
+import Spacer from './components/Spacer';
 
 import './css/team.css'
 
@@ -53,11 +54,11 @@ let allTeams = {
 
 interface AccordionItemProps {
     year: number;
-    names: Array<string>;
-    members: Array<Array<string>>;
+    names: string[];
+    members: string[][];
     parent: string;
     collapsed: boolean;
-    children?: React.ReactNode;
+    children?: ReactNode;
 }
 
 
@@ -114,7 +115,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({year, names, members, pare
         <tbody className="team-body">
             {Array.from({ length: 15 }, (_, i) => (
                 <tr className="team-row">
-                    {members.map((team, index) => (
+                    {members.map((team) => (
                         <td className="team-data" >{team[i]}</td>
                     ))}
                 </tr>
@@ -153,6 +154,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({year, names, members, pare
 }
 
 
+// TODO use this for medals
+// https://getbootstrap.com/docs/5.3/components/collapse/
 
 
 function Team() {
@@ -167,7 +170,119 @@ function Team() {
                 parent={parentID}
                 collapsed={true}
             >
-                hi
+                <Spacer height={80}></Spacer>
+                <Tablist
+                    year={2024}
+                    titles={
+                        [
+                            "Season Summary",
+                            "Georgia Scrimmage",
+                            "Fairfax Invitational",
+                            "Princeton Invitational",
+                            "Fairfax Regional",
+                            "States"
+                        ]
+                    }
+                    contents={
+                        [
+                            (
+                                <div>
+                                    72 medals <br />
+                                    3 trophies <br />
+                                    Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk
+                                </div>
+                            ),
+                            (
+                                <>
+                                    <div className="overall">4th overall</div>
+                                    <ul>
+                                        <li>Astronomy and Physiology (3rd)</li>
+                                        <li>Disease Detectives (7th, 8th)</li>
+                                        <li>Science in the News (3rd, 5th)</li>
+                                    </ul>
+                                </>
+                            ),
+                            (
+                                <>
+                                    <div className="overall">8th overall</div>
+                                    <ul>
+                                        <li>Air Trajectory (5th)</li>
+                                        <li>Anatomy and Physiology (6th)</li>
+                                        <li>Codebusters (4th)</li>
+                                        <li>Disease Detectives (1st)</li>
+                                        <li>Microbe Mission (6th)</li>
+                                        <li>Robot Tour (4th) </li>
+                                        <li>Towers (4th)</li>
+                                    </ul>
+                                </>
+                            ),
+                            (
+                                <>
+                                    <div className="overall">2nd overall</div>
+                                    <ul>
+                                        <li>Air Trajectory (1st, 6th)</li>
+                                        <li>Anatomy and Physiology (3rd)</li>
+                                        <li>Astronomy (2nd, 3rd)</li>
+                                        <li>Codebusters (2nd)</li>
+                                        <li>Detector Building (3rd)</li>
+                                        <li>Disease Detectives (1st)</li>
+                                        <li>Dynamic Planet (6th)</li>
+                                        <li>Forestry (3rd)</li>
+                                        <li>Fossils (4th)</li>
+                                        <li>Towers (3rd)</li>
+                                        <li>WIDI (2nd)</li>
+                                    </ul>
+                                </>
+                            ),
+                            (
+                                <>
+                                    <div className="overall">1st overall</div>
+                                    <ul>
+                                        <li>Air Trajectory (2nd, 3rd, 6th)</li>
+                                        <li>Anatomy and Physiology (3rd, 5th)</li>
+                                        <li>Astronomy (1st, 5th)</li>
+                                        <li>Codebusters (2nd, 4th)</li>
+                                        <li>Disease Detectives (1st, 4th)</li>
+                                        <li>Dynamic Planet (2nd, 4th)</li>
+                                        <li>Ecology (2nd, 5th)</li>
+                                        <li>Fermi Questions (4th, 6th)</li>
+                                        <li>Forensics (3rd)</li>
+                                        <li>Forestry (3rd, 4th)</li>
+                                        <li>Fossils (3rd)</li>
+                                        <li>Geologic Mapping (2nd, 6th)</li>
+                                        <li>Optics (5th)</li>
+                                        <li>Robot Tour (1st, 4th, 5th)</li>
+                                        <li>Scrambler (4th)</li>
+                                        <li>Towers (4th, 5th)</li>
+                                        <li>Wind Power (1st, 4th)</li>
+                                    </ul>
+                                </>
+                            ),
+                            (
+                                <>
+                                    <div className="overall">4th overall</div>
+                                    <ul>
+                                        <li>Air Trajectory (4th)</li>
+                                        <li>Anatomy and Physiology (4th)</li>
+                                        <li>Codebusters (1st)</li>
+                                        <li>Disease Detectives (2nd)</li>
+                                        <li>Dynamic Planet (6th)</li>
+                                        <li>Experimental Design (2nd)</li>
+                                        <li>Fermi Questions (1st)</li>
+                                        <li>Forensics (3rd)</li>
+                                        <li>Forestry (4th)</li>
+                                        <li>Geologic Mapping (2nd)</li>
+                                        <li>Microbe Mission (4th)</li>
+                                        <li>Robot Tour (1st)</li>
+                                        <li>Wind Power (4th)</li>
+                                        <li>Agricultural Science (2nd)</li>
+                                        <li>Cybersecurity (3rd)</li>
+                                    </ul>
+                                </>
+                            )
+                        ]
+                    }
+                ></Tablist>
             </AccordionItem>
             <AccordionItem
                 year={2023}
@@ -176,86 +291,7 @@ function Team() {
                 parent={parentID}
                 collapsed={true}
             >
-                <div className="accomplishments-section">
-                    <div className="accomplishments-title">Season Accomplishments</div>
-                    <br />
-                    <div className="competition">
-                        <span className="competition-name">Georgia Scrimmage:</span>
-                        <ul>
-                            <li>Astronomy (3rd)</li>
-                            <li>Fermi Questions (5th)</li>
-                            <li>Forensics (5th)</li>
-                            <li>Forestry (2th)</li>
-                            <li>It's About Time (6th)</li>
-                            <li>WiFi Lab (6th)</li>
-                        </ul>
-                    </div>
-                    <div className="competition">
-                        <span className="competition-name">Fairfax Invitational (4th):</span>
-                        <ul>
-                            <li>Anatomy and Physiology(5th)</li>
-                            <li>Bridge (1st)</li>
-                            <li>Experimental Design (2nd)</li>
-                            <li>Flight (1st, 2nd)</li>
-                            <li>Forensics (2nd, 3rd)</li>
-                            <li>Forestry (2nd)</li>
-                            <li>Remote Sensing (1st)</li>
-                            <li>WiFi Lab (5th)</li>
-                            <li>WIDI (4th)</li>
-                        </ul>
-                    </div>
-                    <div className="competition">
-                        <span className="competition-name">Princeton Invitational:</span>
-                        <ul>
-                            <li>Forestry (5th)</li>
-                            <li>It's About Time (2nd)</li>
-                            <li>WiFi Lab (2nd)</li>
-                        </ul>
-                    </div>
-                    <div className="competition">
-                        <span className="competition-name">Regionals (3rd):</span>
-                        <ul>
-                            <li>Anatomy and Physiology(6th)</li>
-                            <li>Bridge (4th)</li>
-                            <li>Chem Lab (6th)</li>
-                            <li>Detector Building (2nd)</li>
-                            <li>Disease Detectives (5th)</li>
-                            <li>Dynamic Planet (4th, 6th)</li>
-                            <li>Environmental Chemistry (3rd)</li>
-                            <li>Experimental Design (3rd, 5th)</li>
-                            <li>Fermi Questions (4th)</li>
-                            <li>Forensics (1st)</li>
-                            <li>Forestry (2nd)</li>
-                            <li>It's About Time (2nd)</li>
-                            <li>Rocks and Minerals (3rd)</li>
-                            <li>Scrambler (2nd)</li>
-                            <li>Trajectory (2nd)</li>
-                            <li>WIDI (4th, 5th)</li>
-                            <li>WiFi Lab (2nd)</li>
-                        </ul>
-                    </div>
-                    <div className="competition">
-                        <span className="competition-name">States (4th):</span>
-                        <ul>
-                            <li>Codebusters (5th)</li>
-                            <li>Detector Building (2nd)</li>
-                            <li>Disease Detectives (5th)</li>
-                            <li>Environmental Chemistry (5th)</li>
-                            <li>Fermi Questions (2nd)</li>
-                            <li>Flight (4th)</li>
-                            <li>Forensics (3rd)</li>
-                            <li>Forestry (1st)</li>
-                            <li>Green Generation (2nd)</li>
-                            <li>It's About Time (3rd)</li>
-                            <li>Remote Sensing (6th)</li>
-                            <li>WIDI (6th)</li>
-                            <li>Botany (3rd)</li>
-                            <li>Solar Power (4th)</li>
-                        </ul>
-                    </div>
-                    <br />
-                    Total: 3 trophies and 54 medals
-                </div>
+
             </AccordionItem>
             <AccordionItem
                 year={2022}

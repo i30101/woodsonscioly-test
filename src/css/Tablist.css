@@ -1,0 +1,38 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 21 October 2024
+
+Tablist styles
+*/
+
+
+.nav-tabs {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+    margin: auto;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-light);
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+
+}
+
+.nav-item {
+    margin: auto;
+}
+
+.tablist-link {
+    text-align: center;
+    margin: auto;
+    border: none !important;
+    transition: border, 0.5s;
+}
+
+.tab-pane {
+    padding: 20px;
+}
