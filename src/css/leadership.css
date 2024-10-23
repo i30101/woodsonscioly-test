@@ -1,0 +1,49 @@
+/* 
+Author: Andrew Kim
+Version: 0.0.1
+Since: 23 October 2024
+
+Leadership page styles
+*/
+
+
+.bio-container {
+    background-color: var(--box-dark);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 60px;
+    transition: transform 0.001s;
+}
+
+.bio-container:hover {
+    transform: scale(1.03) !important;
+}
+
+.col-3 {
+    padding-right: 40px;
+}
+
+.bio-image {
+    width: 100%;
+    /* width: 40px; */
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.bio-name {
+    color: var(--primary-blue);
+    font-size: 42px;
+    margin-bottom: 0;
+}
+
+.bio-position {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.bio-text {
+    color: var(--text-light);
+    font-size: 15px ;
+}
+

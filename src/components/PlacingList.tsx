@@ -45,7 +45,7 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
             const keyNum = parseInt(key);
             if (keyNum !== 0) {
                 placements.push(
-                    <li>({abbreviations[keyNum]}): {competitionDict[keyNum]?.join(", ")}</li>
+                    <div className="rank"><span className={"rank-icon rank-" + abbreviations[keyNum]}>{keyNum}</span><span className="rank-events"> {competitionDict[keyNum]?.join(", ")}</span></div>
                 )
             }
         }
@@ -59,9 +59,9 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
                         <></>
                     )
                 }
-                <ul className="placements">
+                <div className="placements">
                     {placements}
-                </ul>
+                </div>
             </div>
         )
     });

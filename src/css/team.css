@@ -53,9 +53,8 @@ Team page styles
     font-weight: 800;
 }
 
-.placements {
+/* .placements {
     padding-left: 0;
-    /* list-style-image: url("../assets/site/bullet.png"); */
 }
 
 .placements > li {
@@ -75,6 +74,56 @@ Team page styles
     background-size: cover;
     background-position-y: 2px;
     background-position-x: -2px;
+} */
+
+.rank {
+    margin-bottom: 8px;
+}
+
+.rank-events {
+    color: var(--text-light);
+}
+
+.rank-icon {
+    padding: 2px;
+    border-radius: 14px;
+    color: black;
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.rank-1st {
+    background-color: var(--duo-1);
+}
+
+.rank-2nd {
+    background-color: var(--duo-2);
+}
+
+.rank-3rd {
+    background-color: var(--duo-3);
+}
+
+.rank-4th {
+    background-color: var(--duo-4);
+}
+
+.rank-5th {
+    background-color: var(--duo-5);
+}
+
+.rank-6th {
+    background-color: var(--duo-6);
+}
+
+.rank-7th {
+    background-color: var(--duo-7);
+}
+
+.rank-8th {
+    background-color: var(--duo-8);
 }
 
 
