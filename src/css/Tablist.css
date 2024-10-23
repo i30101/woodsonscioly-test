@@ -9,7 +9,8 @@ Tablist styles
 
 .nav-tabs {
     padding-bottom: 1px;
-    border-bottom: 1px solid #dee2e6;
+    /* border-bottom: 1px solid #dee2e6; */
+    border-bottom: 2px solid var(--primary-light);
     text-align: center;
     margin: auto;
 }

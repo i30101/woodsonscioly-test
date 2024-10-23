@@ -15,7 +15,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
 import Title from './components/Title';
-import Tablist from './components/Tablist';
+import PlacingList from './components/PlacingList';
 import Spacer from './components/Spacer';
 
 import './css/team.css'
@@ -23,7 +23,7 @@ import './css/team.css'
 
 
 
-let teamNames = {
+const teamNames = {
     "2024": ["Team Europa", "Team Callisto", "Team Io"],
     "2023": ["Team Aang", "Team Katara", "Team Zuko"],
     "2022": ["Team Coelacanth", "Team Oarfish", "Team Sunfish"]
@@ -32,7 +32,7 @@ let teamNames = {
 
 
 // all teams
-let allTeams = {
+const allTeams = {
     "2024": [
         ["Zahra Ramakdawala", "Ian Gonzalez", "James Kim", "Lavanya Mahajan", "Benjamin Hall", "Mia Monroe", "Boram Min", "Cassie Liu", "Matthew Lee", "Andrew Kim", "Sophia Huh", "Morgan Altier", "Ada Qin", "Enzo Hiu", "Katie Yen"],
         ["Madison Williams", "Brian Soltani", "Sariya Juntima", "Audrey Kan", "Enoch Tan", "Richard He", "Harun Khan", "Anh Phan", "Lucas Shen", "Heman Bekele", "Kyle Fernandez", "Nathan Nguyen", "Brian Vu", "Meklit Demile", "Lien Nguyen"],
@@ -50,6 +50,89 @@ let allTeams = {
         ["May Paek", "Sebastian Freemeyer", "Andrew Kim", "Viet Huynh", "Stephen Labys", "Kevin Benoy", "Gio Park", "Pranaav Yelchuru", "Isabella Anderson", "William Brenningmeyer", "Christine Nguyen", "Breanna Ngo", "Catherine Han", "Benjamin Hall", ""]
     ],
 };
+
+const placings2023 = [
+    {
+        2: ["Forestry"],
+        3: ["Astronomy"],
+        5: ["Fermi Questions, Forensics"],
+        6: ["It's About Time, WiFi Lab"],
+    },
+    {
+        0: ["4th overall"],
+        1: ["Bridge, Flight, Remote Sensing"],
+        2: ["Experiemntal Design, Flight, Forensics, Forestry"],
+        3: ["Forensics"],
+        4: ["WIDI"],
+        5: ["Anatomy & Physiology"],
+    },
+    {
+        2: ["It's About Time"],
+        4: ["WiFi Lab"],
+        5: ["Forestry"],
+    },
+    {
+        0: ["3rd overall"],
+        1: ["Forensics"],
+        2: ["Detector Building, Forestry, Forestry, It's About Time, Scrambler, Trajectory, WiFi Lab"],
+        3: ["Environmental Chemistry, Experimental Design, Rocks and Minerals"],
+        4: ["Bridge, Dynamic Planet, Fermi Questions"],
+        5: ["Disease Detectives, WIDI"],
+        6: ["Anatomy & Physiology, Chem Lab, Dynamic Planet"],
+    },
+    {
+        0: ["4th overall"],
+        1: ["Forestry"],
+        2: ["Detector Building, Fermi Questions, Green Generation"],
+        3: ["Forensics, It's About Time, Botany"],
+        4: ["Flight, Solar Power"],
+        5: ["Codebusters, Disease Detectives, Environmental Chemistry"],
+        6: ["Remote Sensing, WIDI"],
+    }
+]
+
+const placings2024 = [
+    {
+        0: ["4th overall"],
+        3: ["Anatomy & Physiology", "Science in the News"],
+        5: ["Science in the News"],
+        7: ["Disease Detectives"],
+        8: ["Disease Detectives"]
+    },
+    {
+        0: ["2nd overall"],
+        1: ["Air Trajectory", "Disease Detectives"],
+        2: ["Astronomy", "Codebusters", "WIDI"],
+        3: ["Anatomy & Physiology", "Astronomy", "Detector Building", "Forestry", "Towers"],
+        4: ["Fossils"],
+        6: ["Air Trajectory", "Dynamic Planet"]
+    },
+    {
+        0: ["8th overall"],
+        1: ["Disease Detectives"],
+        4: ["Codebusters", "Robot Tour", "Towers"],
+        5: ["Air Trajectory"],
+        6: ["Anatomy & Physiology", "Disease Detectives"]
+    },
+    {
+        0: ["1st overall"],
+        1: ["Astronomy", "Disease Detectives", "Robot Tour", "Wind Power"],
+        2: ["Air Trajectory", "Codebusters", "Dynamic Planet", "Ecology", "Geologic Mapping"],
+        3: ["Air Trajectory", "Anatomy & Physiology", "Forensics", "Forestry", "Fossils"],
+        4: ["Codebusters", "Disease Detectives", "Dynamic Planet", "Fermi Questions", "Forestry", "Robot Tour", "Scrambler", "Towers", "Wind Power"],
+        5: ["Anatomy & Physiology", "Astronomy", "Ecology", "Robot Tour", "Towers"],
+        6: ["Air Trajectory", "Fermi Questions", "Geologic Mapping"]
+    },
+    {
+        0: ["4th overall"],
+        1: ["Codebusters", "Fermi Questions", "Robot Tour"],
+        2: ["Disease Detecties", "Experimental Design", "Geologic Mapping", "Agricultural Science"],
+        3: ["Forensics, Cybersecurity"],
+        4: ["Air Trajectory", "Anatomy & Physiology", "Forestry", "Microbe Mission", "Wind Power"],
+        6: ["Dynamic Planet"]
+    }
+]
+
 
 
 interface AccordionItemProps {
@@ -73,7 +156,7 @@ interface AccordionItemProps {
  * @returns 
  */
 
-const AccordionItem: React.FC<AccordionItemProps> = ({year, names, members, parent, collapsed, children}) => {
+const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, parent, collapsed, children}) => {
     const [isCollapsed, setIsCollapsed] = useState(collapsed);
     
     const headingID = "heading" + year;
@@ -83,70 +166,53 @@ const AccordionItem: React.FC<AccordionItemProps> = ({year, names, members, pare
         setIsCollapsed(!isCollapsed);
     }
 
-    // create title
-    const title = (
-        <h2 className="accordion-header" id={headingID}>
-            <button 
-                className={`accordion-button ${isCollapsed ? 'collapsed' : ''}`}
-                type="button"
-                data-bs-target={"#" + contentID}
-                aria-expanded={collapsed}
-                aria-controls={contentID}
-                onClick={handleToggle}
-            >
-                {year - 1 + "-" + year + " Season"}
-            </button>
-        </h2>
-    )
-
-
-    const tableHead = (
-        <thead className="team-head">
-            <tr>
-                {Array.from({ length: 3 }, (_, i) => (
-                    <th className="team-head" scope="col">{names[i]}</th>
-                ))}
-            </tr>
-        </thead>
-    );
-
-
-    const tableBody = (
-        <tbody className="team-body">
-            {Array.from({ length: 15 }, (_, i) => (
-                <tr className="team-row">
-                    {members.map((team) => (
-                        <td className="team-data" >{team[i]}</td>
+    // create table
+    const table = (
+        <table className="table team-table">
+            <thead className="team-head">
+                <tr>
+                    {Array.from({ length: 3 }, (_, i) => (
+                        <th className="team-head" scope="col">{names[i]}</th>
                     ))}
                 </tr>
-            ))}
-        </tbody>
-    );
-
-    const table = <table className="table team-table">
-        {tableHead}
-        {tableBody}
-    </table>
-
-
-    // create content (table container)
-    const body = (
-        <div 
-            id={contentID}
-            className={`accordion-collapse collapse ${!isCollapsed ? 'show' : ''}`}
-            aria-labelledby={headingID}
-            data-bs-parent={parent}
-        >
-            {table}
-            {children}
-        </div>
+            </thead>
+            <tbody className="team-body">
+                {Array.from({ length: 15 }, (_, i) => (
+                    <tr className="team-row">
+                        {members.map((team) => (
+                            <td className="team-data" >{team[i]}</td>
+                        ))}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     )
 
     // create accordion item container
     const accordionItem = (
         <div className="accordion-item" id={"accordion" + year}>
-            {title}
-            {body}
+            <h2 className="accordion-header" id={headingID}>
+                <button 
+                    className={`accordion-button ${isCollapsed ? 'collapsed' : ''}`}
+                    type="button"
+                    data-bs-target={"#" + contentID}
+                    aria-expanded={collapsed}
+                    aria-controls={contentID}
+                    onClick={handleToggle}
+                >
+                    {year - 1 + "-" + year + " Season"}
+                </button>
+            </h2>
+
+            <div 
+                id={contentID}
+                className={`accordion-collapse collapse ${!isCollapsed ? 'show' : ''}`}
+                aria-labelledby={headingID}
+                data-bs-parent={parent}
+            >
+                {table}
+                {children}
+            </div>
         </div>
     )
 
@@ -154,154 +220,48 @@ const AccordionItem: React.FC<AccordionItemProps> = ({year, names, members, pare
 }
 
 
-// TODO use this for medals
-// https://getbootstrap.com/docs/5.3/components/collapse/
-
 
 function Team() {
     const parentID = "teamAccordion";
     return <>
         <Title title="Our" highlight="Team" after="" subtitle="Learn about the coolest Science Olympiad team in VA."></Title>
         <div data-aos="fade-up" className="accordion" id={parentID}>
-            <AccordionItem
-                year={2024}
-                names={teamNames[2024]}
-                members={allTeams[2024]}
-                parent={parentID}
-                collapsed={true}
-            >
+            <SeasonAccordion year={2024} names={teamNames[2024]} members={allTeams[2024]} parent={parentID} collapsed={true}>
                 <Spacer height={80}></Spacer>
-                <Tablist
+                <PlacingList
                     year={2024}
-                    titles={
-                        [
-                            "Season Summary",
-                            "Georgia Scrimmage",
-                            "Fairfax Invitational",
-                            "Princeton Invitational",
-                            "Fairfax Regional",
-                            "States"
-                        ]
+                    titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational", "Princeton Invitational", "Fairfax Regional", "States" ]}
+                    placings={placings2024}
+                    first={
+                        <div>
+                            <div>72 medals</div>
+                            <div>3 trophies</div>
+                             <div>Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk</div>
+                        </div>
                     }
-                    contents={
-                        [
-                            (
-                                <div>
-                                    72 medals <br />
-                                    3 trophies <br />
-                                    Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk
-                                </div>
-                            ),
-                            (
-                                <>
-                                    <div className="overall">4th overall</div>
-                                    <ul>
-                                        <li>Astronomy and Physiology (3rd)</li>
-                                        <li>Disease Detectives (7th, 8th)</li>
-                                        <li>Science in the News (3rd, 5th)</li>
-                                    </ul>
-                                </>
-                            ),
-                            (
-                                <>
-                                    <div className="overall">8th overall</div>
-                                    <ul>
-                                        <li>Air Trajectory (5th)</li>
-                                        <li>Anatomy and Physiology (6th)</li>
-                                        <li>Codebusters (4th)</li>
-                                        <li>Disease Detectives (1st)</li>
-                                        <li>Microbe Mission (6th)</li>
-                                        <li>Robot Tour (4th) </li>
-                                        <li>Towers (4th)</li>
-                                    </ul>
-                                </>
-                            ),
-                            (
-                                <>
-                                    <div className="overall">2nd overall</div>
-                                    <ul>
-                                        <li>Air Trajectory (1st, 6th)</li>
-                                        <li>Anatomy and Physiology (3rd)</li>
-                                        <li>Astronomy (2nd, 3rd)</li>
-                                        <li>Codebusters (2nd)</li>
-                                        <li>Detector Building (3rd)</li>
-                                        <li>Disease Detectives (1st)</li>
-                                        <li>Dynamic Planet (6th)</li>
-                                        <li>Forestry (3rd)</li>
-                                        <li>Fossils (4th)</li>
-                                        <li>Towers (3rd)</li>
-                                        <li>WIDI (2nd)</li>
-                                    </ul>
-                                </>
-                            ),
-                            (
-                                <>
-                                    <div className="overall">1st overall</div>
-                                    <ul>
-                                        <li>Air Trajectory (2nd, 3rd, 6th)</li>
-                                        <li>Anatomy and Physiology (3rd, 5th)</li>
-                                        <li>Astronomy (1st, 5th)</li>
-                                        <li>Codebusters (2nd, 4th)</li>
-                                        <li>Disease Detectives (1st, 4th)</li>
-                                        <li>Dynamic Planet (2nd, 4th)</li>
-                                        <li>Ecology (2nd, 5th)</li>
-                                        <li>Fermi Questions (4th, 6th)</li>
-                                        <li>Forensics (3rd)</li>
-                                        <li>Forestry (3rd, 4th)</li>
-                                        <li>Fossils (3rd)</li>
-                                        <li>Geologic Mapping (2nd, 6th)</li>
-                                        <li>Optics (5th)</li>
-                                        <li>Robot Tour (1st, 4th, 5th)</li>
-                                        <li>Scrambler (4th)</li>
-                                        <li>Towers (4th, 5th)</li>
-                                        <li>Wind Power (1st, 4th)</li>
-                                    </ul>
-                                </>
-                            ),
-                            (
-                                <>
-                                    <div className="overall">4th overall</div>
-                                    <ul>
-                                        <li>Air Trajectory (4th)</li>
-                                        <li>Anatomy and Physiology (4th)</li>
-                                        <li>Codebusters (1st)</li>
-                                        <li>Disease Detectives (2nd)</li>
-                                        <li>Dynamic Planet (6th)</li>
-                                        <li>Experimental Design (2nd)</li>
-                                        <li>Fermi Questions (1st)</li>
-                                        <li>Forensics (3rd)</li>
-                                        <li>Forestry (4th)</li>
-                                        <li>Geologic Mapping (2nd)</li>
-                                        <li>Microbe Mission (4th)</li>
-                                        <li>Robot Tour (1st)</li>
-                                        <li>Wind Power (4th)</li>
-                                        <li>Agricultural Science (2nd)</li>
-                                        <li>Cybersecurity (3rd)</li>
-                                    </ul>
-                                </>
-                            )
-                        ]
+                ></PlacingList>
+            </SeasonAccordion>
+            <SeasonAccordion year={2023} names={teamNames[2023]} members={allTeams[2023]} parent={parentID} collapsed={true}>
+                <Spacer height={80}></Spacer>
+                <PlacingList
+                    year={2023}
+                    titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational",  "Princeton Invitational", "Thomas Jefferson Regional", "States" ]}
+                    placings={placings2023}
+                    first={
+                        <div>
+                            <div>54 medals</div>
+                            <div>3 trophies</div>
+                        </div>
                     }
-                ></Tablist>
-            </AccordionItem>
-            <AccordionItem
-                year={2023}
-                names={teamNames[2023]}
-                members={allTeams[2023]}
-                parent={parentID}
-                collapsed={true}
-            >
-
-            </AccordionItem>
-            <AccordionItem
+                ></PlacingList>
+            </SeasonAccordion>
+            <SeasonAccordion
                 year={2022}
                 names={teamNames[2022]}
                 members={allTeams[2022]}
                 parent={parentID}
                 collapsed={true}
-            >
-
-            </AccordionItem>
+            ></SeasonAccordion>
         </div>
     </>
 }

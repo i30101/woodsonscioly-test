@@ -29,6 +29,7 @@ import Contribute from './contribute';
 import Team from './team';
 import Body from './components/Body';
 import Footer from './components/Footer';
+import Blog from './blog';
 
 
 
@@ -54,6 +55,7 @@ function App() {
                     <Route path="/" element={<Index />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/tryouts" element={<Tryouts />} />
                     <Route path="/contribute" element={<Contribute />} />
                 </Routes>

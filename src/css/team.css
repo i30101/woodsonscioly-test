@@ -50,6 +50,31 @@ Team page styles
 
 .overall {
     margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.placements {
+    padding-left: 0;
+    /* list-style-image: url("../assets/site/bullet.png"); */
+}
+
+.placements > li {
+    color: var(--text-light);
+}
+
+.placements > li {
+    list-style: none;
+}
+
+.placements > li::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url("../assets/site/chevron-right.png");
+    background-size: cover;
+    background-position-y: 2px;
+    background-position-x: -2px;
 }
 
 
@@ -60,26 +85,6 @@ Team page styles
     padding: 8px 28px 20px 28px;
     color: white;
 }
-
-
-
-/* .team-head, .team-body {
-    width: 800px !important;
-}
-
-td {
-    width: 33.33%;
-} */
-
-/* .team-table {
-    width: 1144px !important;
-}
-
-
-th, td {
-    width: 33.33%;
-
-} */
 
 
 table {

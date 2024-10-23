@@ -42,13 +42,13 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-md-0" data-aos="fade-up" data-aos-delay="200">
                         <li className="nav-item">
-                            <a className="nav-link navbar-link link" href="/">Home</a>
-                        </li>
-                        <li className="nav-item">
                             <a className="nav-link navbar-link link" href="team">The Team</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link navbar-link link" href="leadership">Leadership</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link navbar-link link" href="blog">Blog</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link navbar-link link" href="tryouts">Tryouts</a>
