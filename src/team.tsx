@@ -7,8 +7,7 @@
  */
 
 
-import React, { Children, ReactElement, ReactNode, useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { ReactNode, useState } from 'react';
 
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -24,6 +23,7 @@ import './css/team.css'
 
 
 const teamNames = {
+    "2025": ["Team Godzilla", "Team Rodan", "Team Mothra"],
     "2024": ["Team Europa", "Team Callisto", "Team Io"],
     "2023": ["Team Aang", "Team Katara", "Team Zuko"],
     "2022": ["Team Coelacanth", "Team Oarfish", "Team Sunfish"]
@@ -33,6 +33,11 @@ const teamNames = {
 
 // all teams
 const allTeams = {
+    "2025": [
+        ["Ian Gonzalez", "Elaina Wi", "Ivy Zhao", "James Kim", "Nick Tong", "Mia Monroe", "Jamie Kim", "Vibu Vishnu Ram", "Catherine Han", "Matthew Lee", "Timothy Lin-Lee", "Andrew Kim", "Morgan Altier", "Katie Yen", "Ada Qin"],
+        ["Nora Islam", "Ryan Chong", "Yeeun Kwak", "Richard He", "Enoch Tan", "Maddie Cho", "Brian Soltani", "Shaheer Khan", "Maggie Wang", "Dylan Nguyen", "Krish Stauber", "Maria Wang", "Laurent Pham", "Daniel Barnabas", "Josefien Declerk"],
+        ["Madison Williams", "Ben Kralovec", "Amanda Martin", "Maya Smith", "Khoa Nguyen", "Harun Khan", "Emily Pan", "Hanru Xu", "Brian Vu", "Chenfei Zhou", "Nathan Nguyen", "WynSon Phan", "Esther Li", "Clive Song", "Sophia Li"]
+    ],
     "2024": [
         ["Zahra Ramakdawala", "Ian Gonzalez", "James Kim", "Lavanya Mahajan", "Benjamin Hall", "Mia Monroe", "Boram Min", "Cassie Liu", "Matthew Lee", "Andrew Kim", "Sophia Huh", "Morgan Altier", "Ada Qin", "Enzo Hiu", "Katie Yen"],
         ["Madison Williams", "Brian Soltani", "Sariya Juntima", "Audrey Kan", "Enoch Tan", "Richard He", "Harun Khan", "Anh Phan", "Lucas Shen", "Heman Bekele", "Kyle Fernandez", "Nathan Nguyen", "Brian Vu", "Meklit Demile", "Lien Nguyen"],
@@ -133,6 +138,43 @@ const placings2024 = [
     }
 ]
 
+const placings2025 = [
+    {
+        0: ["2nd overall"],
+        2: ["Codebusters", "Etomology"],
+        3: ["Fossils", "Optics"],
+        5: ["Wind Power"],
+        8: ["Ecology"],
+        9: ["Anatomy & Physiology"]
+    }
+]
+
+interface TableProps {
+    names: string[]
+    members: string[][];
+}
+
+const MemberTable: React.FC<TableProps> = ({names, members}) => {
+    return <table className="table team-table">
+        <thead>
+            <tr>
+                {Array.from({length: 3}, (_, i) => (
+                    <th className="team-head">{names[i]}</th>
+                ))}
+            </tr>
+        </thead>
+        <tbody>
+            {Array.from({length: 15}, (_, i) => (
+                <tr className="team-row">
+                    {members.map((team, index) => (
+                        <td className="team-data">{team[i]}</td>
+                    ))}
+                </tr>
+            ))}
+        </tbody>
+    </table>
+}
+
 
 
 interface AccordionItemProps {
@@ -151,8 +193,8 @@ interface AccordionItemProps {
  * @param names the team names
  * @param members list of members per team
  * @param parent id of parent accordion container
- * @param content additional html to be included
  * @param collapsed whether the content is collapsed or not
+ * @param content additional html to be included
  * @returns 
  */
 
@@ -165,28 +207,6 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
     const handleToggle = () => {
         setIsCollapsed(!isCollapsed);
     }
-
-    // create table
-    const table = (
-        <table className="table team-table">
-            <thead className="team-head">
-                <tr>
-                    {Array.from({ length: 3 }, (_, i) => (
-                        <th className="team-head" scope="col">{names[i]}</th>
-                    ))}
-                </tr>
-            </thead>
-            <tbody className="team-body">
-                {Array.from({ length: 15 }, (_, i) => (
-                    <tr className="team-row">
-                        {members.map((team) => (
-                            <td className="team-data" >{team[i]}</td>
-                        ))}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    )
 
     // create accordion item container
     const accordionItem = (
@@ -210,7 +230,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
                 aria-labelledby={headingID}
                 data-bs-parent={parent}
             >
-                {table}
+                <MemberTable names={names} members={members}></MemberTable>
                 {children}
             </div>
         </div>
@@ -225,44 +245,62 @@ function Team() {
     const parentID = "teamAccordion";
     return <>
         <Title title="Our" highlight="Team" after="" subtitle="Learn about the coolest Science Olympiad team in VA."></Title>
-        <div data-aos="fade-up" className="accordion" id={parentID}>
-            <SeasonAccordion year={2024} names={teamNames[2024]} members={allTeams[2024]} parent={parentID} collapsed={true}>
-                <Spacer height={80}></Spacer>
-                <PlacingList
-                    year={2024}
-                    titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational", "Princeton Invitational", "Fairfax Regional", "States" ]}
-                    placings={placings2024}
-                    first={
-                        <div>
-                            <div>72 medals</div>
-                            <div>3 trophies</div>
-                             <div>Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk</div>
-                        </div>
-                    }
-                ></PlacingList>
-            </SeasonAccordion>
-            <SeasonAccordion year={2023} names={teamNames[2023]} members={allTeams[2023]} parent={parentID} collapsed={true}>
-                <Spacer height={80}></Spacer>
-                <PlacingList
-                    year={2023}
-                    titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational",  "Princeton Invitational", "Thomas Jefferson Regional", "States" ]}
-                    placings={placings2023}
-                    first={
-                        <div>
-                            <div>54 medals</div>
-                            <div>3 trophies</div>
-                        </div>
-                    }
-                ></PlacingList>
-            </SeasonAccordion>
-            <SeasonAccordion
-                year={2022}
-                names={teamNames[2022]}
-                members={allTeams[2022]}
-                parent={parentID}
-                collapsed={true}
-            ></SeasonAccordion>
+        
+        <div className="primary-section" data-aos="fade-up">
+            <div className="heading-1" data-aos="fade-up">2024-2025 Season Team</div>
+            <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
+            <PlacingList
+                year={2025}
+                titles={["Season Summary", "Georgia Scrimmage"]}
+                placings={placings2025}
+                first={
+                    <div>
+                        <div>7 medals</div>
+                        <div>Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
+                    </div>
+                } />
         </div>
+
+        <div className="primary-section" data-aos="fade-up">
+            <div className="heading-1" data-aos="fade-up">Previous Seasons</div>
+            <div data-aos="fade-up" className="accordion" id={parentID}>
+                <SeasonAccordion year={2024} names={teamNames[2024]} members={allTeams[2024]} parent={parentID} collapsed={true}>
+                    <PlacingList
+                        year={2024}
+                        titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational", "Princeton Invitational", "Fairfax Regional", "States" ]}
+                        placings={placings2024}
+                        first={
+                            <div>
+                                <div>72 medals</div>
+                                <div>3 trophies</div>
+                                <div>Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk</div>
+                            </div>
+                        }
+                    />
+                </SeasonAccordion>
+                <SeasonAccordion year={2023} names={teamNames[2023]} members={allTeams[2023]} parent={parentID} collapsed={true}>
+                    <PlacingList
+                        year={2023}
+                        titles={["Season Summary", "Georgia Scrimmage", "Fairfax Invitational",  "Princeton Invitational", "Thomas Jefferson Regional", "States" ]}
+                        placings={placings2023}
+                        first={
+                            <div>
+                                <div>54 medals</div>
+                                <div>3 trophies</div>
+                            </div>
+                        }
+                    />
+                </SeasonAccordion>
+                <SeasonAccordion
+                    year={2022}
+                    names={teamNames[2022]}
+                    members={allTeams[2022]}
+                    parent={parentID}
+                    collapsed={true}
+                />
+            </div>
+        </div>
+
     </>
 }
 

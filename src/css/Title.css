@@ -11,8 +11,8 @@
 }
 
 #highlight {
-    color: var(--primary-light);
-    background-color: var(--primary-dark);
+    color: var(--primary-blue);
+    background-color: var(--primary-backdrop);
     padding: 0 10px;
     border-radius: 10px;
 }

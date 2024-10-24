@@ -53,29 +53,6 @@ Team page styles
     font-weight: 800;
 }
 
-/* .placements {
-    padding-left: 0;
-}
-
-.placements > li {
-    color: var(--text-light);
-}
-
-.placements > li {
-    list-style: none;
-}
-
-.placements > li::before {
-    content: "";
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-image: url("../assets/site/chevron-right.png");
-    background-size: cover;
-    background-position-y: 2px;
-    background-position-x: -2px;
-} */
-
 .rank {
     margin-bottom: 8px;
 }
@@ -126,13 +103,17 @@ Team page styles
     background-color: var(--duo-8);
 }
 
+.rank-9th {
+    background-color: var(--duo-9);
+}
+
 
 .accordion-collapse {
     background-color: var(--box-light) !important;
     border-bottom-left-radius: var(--accordion-border);
     border-bottom-right-radius: var(--accordion-border);
     padding: 8px 28px 20px 28px;
-    color: white;
+    /* color: white; */
 }
 
 
@@ -142,6 +123,9 @@ table {
     text-align: center;
 }
 
+.team-table {
+    margin-bottom: 80px;
+}
 
 .team-head, .team-data {
     background-color: transparent !important;

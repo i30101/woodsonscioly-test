@@ -21,7 +21,8 @@ body {
 :root {
     --background: #050c1a;
     --primary-dark: #10163b;
-    --primary-light: #4e4ef7;
+    --primary-purple: #4e4ef7;
+    --primary-backdrop: #0b183d;
     --primary-blue: #3959ff;
 
     --box-dark: #071324;
@@ -40,6 +41,7 @@ body {
     --duo-6: #e1bde3;
     --duo-7: #fde2b7;
     --duo-8: #b4eaf1;
+    --duo-9: #f8bbd0;
 }
 
 
@@ -52,5 +54,17 @@ body {
 }
 
 .link:hover, .link:active, .link:focus {
-    color: var(--primary-light);
+    color: var(--primary-blue);
+}
+
+.primary-section {
+    margin-bottom: 100px;
+}
+
+.heading-1 {
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
 }

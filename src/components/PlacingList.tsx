@@ -14,10 +14,10 @@ import 'bootstrap'
 
 // styling
 import '../css/Navbar.css'
-import '../css/Tablist.css'
+import '../css/PlacingList.css'
 import '../css/style.css'
 
-const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
+const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
 
 
 interface TablistProps {
@@ -65,14 +65,12 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
             </div>
         )
     });
-    console.log(contents);
 
-
-    const tabList = <>
+    const tabList = <div className="placing-list">
         <ul className="nav nav-tabs" role="tablist">
             {
                 titles.map((item, index) => (
-                    <li className="nav-item" role="presentation">
+                    <li key={"nav" + index} className="nav-item" role="presentation">
                         {(index === 0) ?
                             (
                                 <button 
@@ -138,7 +136,7 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
                 ))
             }
         </div>
-    </>
+    </div >
 
     return tabList;
 }

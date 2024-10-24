@@ -7,20 +7,19 @@ Tablist styles
 */
 
 
+
 .nav-tabs {
     padding-bottom: 1px;
-    /* border-bottom: 1px solid #dee2e6; */
-    border-bottom: 2px solid var(--primary-light);
+    border-bottom: 2px solid var(--primary-blue);
     text-align: center;
     margin: auto;
 }
 
 .nav-tabs .nav-link.active {
-    color: var(--primary-light);
+    color: var(--primary-blue);
     background-color: transparent;
     box-shadow: none;
     outline: none;
-
 }
 
 .nav-item {
@@ -36,4 +35,5 @@ Tablist styles
 
 .tab-pane {
     padding: 20px;
+    color: white;
 }

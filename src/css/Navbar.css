@@ -49,13 +49,13 @@ Navbar styles
     padding: 6px 20px 20px 20px;
     border: 2px solid ;
     border-radius: 20px;
-    color: var(--primary-light);
+    color: var(--primary-purple);
     transition: background-color, 0.5s;
     margin: auto;
 }
 
 #sign-in-button:hover, #sign-in-button:active, #sign-in-button:focus{
-    background-color: var(--primary-light) !important;
+    background-color: var(--primary-purple) !important;
     color: var(--background) !important;
 }
 
