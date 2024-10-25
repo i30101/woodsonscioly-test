@@ -1,3 +1,12 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 24 October 2024
+
+Title styles
+*/
+
+
 #intro {
     text-align: center;
     margin-top: 100px;
@@ -5,7 +14,6 @@
 }
 
 #title {
-    font-size: 60px;
     color: white;
     font-weight: 700;
 }
@@ -22,4 +30,18 @@
     font-weight: 400;
     margin-top: 30px;
     font-size: 18px;
+}
+
+
+/* **************** MEDIA QUERIES **************** */
+@media (min-width: 992px) {
+    #title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 991px) {
+    #title {
+        font-size: 40px;
+    }
 }

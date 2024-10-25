@@ -7,9 +7,3 @@ Body styles
 */
 
 
-#body {
-    /* background-color: white; */
-    min-height: calc(100vh - 94px);
-    max-width: var(--max-body-width);
-    margin: auto;
-}

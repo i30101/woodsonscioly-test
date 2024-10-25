@@ -9,7 +9,6 @@ Footer styles
 
 #footer {
     max-width: 1200px;
-    margin: 200px auto 150px auto;
     padding: 40px 0 0 0;
     color: var(--text-light);
 }
@@ -29,10 +28,39 @@ Footer styles
 
 .footer-title {
     font-weight: 600;
-    margin-bottom: 35px;
 }
 
 .footer-link {
     display: block;
     margin-bottom: 7px;
+}
+
+
+/* **************** MEDIA QUERIES **************** */
+@media (min-width: 992px) {
+    #footer {
+        margin: 200px auto 150px auto;
+    }
+
+    .footer-title {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 991px) {
+    #footer {
+        margin: 200px auto 50px auto;
+    }
+    
+    #footer-first-col {
+        margin-bottom: 40px;
+    }
+
+    .footer-title {
+        margin-bottom: 10px;
+    }
+
+    .col-xs-6, .col-sm-6 {
+        width: 50% !important;
+    }
 }

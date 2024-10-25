@@ -59,6 +59,7 @@ body {
 
 .primary-section {
     margin-bottom: 100px;
+    max-width: 100%;
 }
 
 .heading-1 {
@@ -67,4 +68,22 @@ body {
     color: white;
     font-weight: 700;
     margin-bottom: 40px;
+}
+
+#body {
+    min-height: calc(100vh - 94px);
+    max-width: var(--max-body-width);
+    margin: auto;
+}
+
+
+/* **************** MEDIA QUERIES **************** */
+@media (min-width: 992px) {
+    
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 0 10px;
+    }
 }

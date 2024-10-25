@@ -48,7 +48,7 @@ const OfficerBio: React.FC<BioProps> = ({name, position, grade, image, children}
 
 
 function Leadership() {
-    return <>
+    return <div className="primary-section">
         <Title title="Our" highlight="Leadership" after="" subtitle="Meet our amazing officers!"></Title>
         <OfficerBio
             name="Andrew Kim"
@@ -98,7 +98,7 @@ function Leadership() {
         >
             Hello! I'm Morgan, and I'm a senior who loves math and science and staying up late for no reason. It's my third year doing Science Olympiad, and I've loved it ever since I started sophomore year. My favorite thing about scioly is the fun and supportive community. In my free time, you can find me listening to music, solving puzzles, crocheting, and playing bass. I'm looking forward to this year in scioly and what it has in store !
         </OfficerBio>
-    </>
+    </div>
 }
 
 export default Leadership;

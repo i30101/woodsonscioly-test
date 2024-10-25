@@ -25,7 +25,6 @@ Leadership page styles
 
 .bio-image {
     width: 100%;
-    /* width: 40px; */
     border-radius: 50%;
     padding: 20px;
 }
@@ -47,3 +46,14 @@ Leadership page styles
     font-size: 15px ;
 }
 
+
+/* **************** MEDIA QUERIES **************** */
+@media (min-width: 992px) {
+    
+}
+
+@media (max-width: 991px) {
+    .bio-container {
+        margin: 0 0 60px 0;
+    }
+}
