@@ -30,11 +30,11 @@ interface TablistProps {
 
 const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) => {
     const tabIDs = titles.map((item, index) => {
-        return "tab" + year + "-" + index
+        return "tab" + year + "-" + index;
     });
 
     const contentIDs = titles.map((item, index) => {
-        return "content" + year + "-" + index
+        return "content" + year + "-" + index;
     })
     
     const contents: ReactNode[] = placings.map((competition, index) => {

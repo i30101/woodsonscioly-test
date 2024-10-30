@@ -31,7 +31,7 @@ interface BlogProps {
 const BlogContainer: React.FC<BlogProps> = ({image, category, title, date}) => {
     return <a href="/" className="blog-container col-xs-12 col0sm-12 col-md-6 col-lg-6" data-aos="fade-up">
         <img src={image} className="blog-image" />
-        <div className="blog-category">{category}</div>
+        <span className="blog-category">{category}</span>
         <div className="blog-title">{title}</div>
         <div className="blog-date">{date}</div>
     </a>

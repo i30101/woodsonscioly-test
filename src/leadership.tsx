@@ -35,10 +35,10 @@ interface BioProps {
 
 const OfficerBio: React.FC<BioProps> = ({name, position, grade, image, children}) => {
     return <div className="bio-container row" data-aos="fade-up">
-        <div className="col-3">
+        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <img src={image} className="bio-image" />
         </div>
-        <div className="col-9">
+        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <h2 className="bio-name">{name}</h2>
             <div className="bio-position">{grade}, {position}</div>
             <div className="bio-text">{children}</div>
