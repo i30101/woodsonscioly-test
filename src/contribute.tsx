@@ -29,9 +29,7 @@ const DonateList: React.FC<DonateProps> = ({levels, benefits}) => {
 
     const contentIDs = levels.map((level, index) => {
         return level + "Content";
-    })
-
-    
+    })    
     
     return <></>
 }
