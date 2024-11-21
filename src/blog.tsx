@@ -47,7 +47,7 @@ function Blog() {
             <BlogContainer
                 image={georgia}
                 category="Competitions"
-                title="2025 Georga Scrimmage Results"
+                title="2025 Georgia Scrimmage Results"
                 date="October 24th, 2024" />
             <BlogContainer
                 image={season2024}
