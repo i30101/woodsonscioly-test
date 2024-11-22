@@ -38,7 +38,7 @@ const BlogContainer: React.FC<BlogProps> = ({image, category, title, date}) => {
 }
 
 
-
+// https://ehire.webflow.io/#about-us   
 function Blog() {
     return <>
         <Title title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do."></Title>

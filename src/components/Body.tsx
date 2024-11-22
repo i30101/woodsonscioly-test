@@ -12,7 +12,6 @@ import React from 'react';
 
 // styling
 import '../css/style.css';
-import '../css/Body.css';
 
 // classes
 import Footer from './Footer';
