@@ -108,14 +108,14 @@ const placings2024 = [
         0: ["2nd overall"],
         1: ["Air Trajectory", "Disease Detectives"],
         2: ["Astronomy", "Codebusters", "WIDI"],
-        3: ["Anatomy & Physiology", "Astronomy", "Detector Building", "Forestry", "Towers"],
+        3: ["Anatomy & Physiology", "Astronomy", "Detector Building", "Forestry", "Tower"],
         4: ["Fossils"],
         6: ["Air Trajectory", "Dynamic Planet"]
     },
     {
         0: ["8th overall"],
         1: ["Disease Detectives"],
-        4: ["Codebusters", "Robot Tour", "Towers"],
+        4: ["Codebusters", "Robot Tour", "Tower"],
         5: ["Air Trajectory"],
         6: ["Anatomy & Physiology", "Disease Detectives"]
     },
@@ -124,8 +124,8 @@ const placings2024 = [
         1: ["Astronomy", "Disease Detectives", "Robot Tour", "Wind Power"],
         2: ["Air Trajectory", "Codebusters", "Dynamic Planet", "Ecology", "Geologic Mapping"],
         3: ["Air Trajectory", "Anatomy & Physiology", "Forensics", "Forestry", "Fossils"],
-        4: ["Codebusters", "Disease Detectives", "Dynamic Planet", "Fermi Questions", "Forestry", "Robot Tour", "Scrambler", "Towers", "Wind Power"],
-        5: ["Anatomy & Physiology", "Astronomy", "Ecology", "Robot Tour", "Towers"],
+        4: ["Codebusters", "Disease Detectives", "Dynamic Planet", "Fermi Questions", "Forestry", "Robot Tour", "Scrambler", "Tower", "Wind Power"],
+        5: ["Anatomy & Physiology", "Astronomy", "Ecology", "Robot Tour", "Tower"],
         6: ["Air Trajectory", "Fermi Questions", "Geologic Mapping"]
     },
     {
@@ -146,6 +146,15 @@ const placings2025 = [
         5: ["Wind Power"],
         8: ["Ecology"],
         9: ["Anatomy & Physiology"]
+    },
+    {
+        0: ["4th overall"],
+        1: ["Helicopter"],
+        2: ["Codebusters", "Tower"],
+        4: ["Forensics", "Fossils", "Robot Tour"],
+        5: ["Entomology", "Microbe Mission", "Tower"],
+        6: ["Air Trajectory", "Brainrot Battle"]
+        
     }
 ]
 
@@ -251,7 +260,7 @@ function Team() {
             <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
             <PlacingList
                 year={2025}
-                titles={["Season Summary", "Georgia Scrimmage"]}
+                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational"]}
                 placings={placings2025}
                 first={
                     <div>

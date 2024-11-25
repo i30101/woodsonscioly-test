@@ -30,6 +30,7 @@ import Team from './team';
 import Body from './components/Body';
 import Footer from './components/Footer';
 import Blog from './blog';
+import Georgia2025 from './blog/georgia2025';
 
 
 
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/tryouts" element={<Tryouts />} />
                     <Route path="/contribute" element={<Contribute />} />
+                    <Route path="/blog/georgia2025" element={<Georgia2025 />} />
                 </Routes>
             </Body>
             <Footer />

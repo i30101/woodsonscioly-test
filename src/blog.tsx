@@ -21,15 +21,16 @@ import georgia from './assets/blog/georgia.jpg'
 import season2024 from './assets/blog/season2024.jpg'
 import september from './assets/blog/september.jpg'
 
-interface BlogProps {
-    image: any;
-    category: string;
+
+interface BlogContainerProps {
     title: string;
     date: string
+    image: any;
+    category: string;
 }
 
-const BlogContainer: React.FC<BlogProps> = ({image, category, title, date}) => {
-    return <a href="/" className="blog-container col-xs-12 col0sm-12 col-md-6 col-lg-6" data-aos="fade-up">
+const BlogContainer: React.FC<BlogContainerProps> = ({title, date, image, category}) => {
+    return <a href="./blog/georgia2025" className="blog-container col-xs-12 col0sm-12 col-md-6 col-lg-6" data-aos="fade-up">
         <img src={image} className="blog-image" />
         <span className="blog-category">{category}</span>
         <div className="blog-title">{title}</div>
@@ -38,7 +39,6 @@ const BlogContainer: React.FC<BlogProps> = ({image, category, title, date}) => {
 }
 
 
-// https://ehire.webflow.io/#about-us   
 function Blog() {
     return <>
         <Title title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do."></Title>

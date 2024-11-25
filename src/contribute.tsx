@@ -22,6 +22,10 @@ interface DonateProps {
     benefits: string[][];
 }
 
+
+// https://ehire.webflow.io/#about-us   
+
+
 const DonateList: React.FC<DonateProps> = ({levels, benefits}) => {
     const tabIDs = levels.map((level, index) => {
         return level + "Tab";
