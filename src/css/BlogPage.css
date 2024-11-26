@@ -1,0 +1,16 @@
+/* 
+Author: Andrew Kim
+Version: 0.0.1
+Since: 22 November 2024
+
+Blog page styles
+*/
+
+
+.intro-container {
+    width: calc(100vw - 21px) !important;
+    background-color: blue;
+    height: calc(100vh - 94px);
+    margin-left: calc(-1 * calc(calc(100vw - 21px) - var(--max-body-width)) / 2);
+    overflow-x: hidden;
+}
