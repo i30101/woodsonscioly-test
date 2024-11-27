@@ -51,16 +51,18 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
         }
 
         return (
-            <div>
-                {(competitionDict["0"]) ? 
-                    (
-                        <div className="overall">{competitionDict["0"]}</div>
-                    ) : (
-                        <></>
-                    )
-                }
-                <div className="placements">
-                    {placements}
+            <div className="placing-container">
+                <div className="placing-list">
+                    {(competitionDict["0"]) ? 
+                        (
+                            <div className="overall">{competitionDict["0"]}</div>
+                        ) : (
+                            <></>
+                        )
+                    }
+                    <div className="placements">
+                        {placements}
+                    </div>
                 </div>
             </div>
         )

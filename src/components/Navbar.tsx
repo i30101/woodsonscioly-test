@@ -58,7 +58,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="300">
-                        <button className="btn" id="sign-in-button" type="submit">Log in</button>
+                        <button className="btn sign-in-button" type="submit">Log in</button>
                     </form>
                 </div>
             </div>

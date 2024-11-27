@@ -6,44 +6,33 @@ Since: 25 October 2024
 Contribute page styles
 */
 
-/* 
-.donate-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-} */
 
-#donate-row {
-    width: 60%;
-    margin-left: 20%;
+
+
+
+
+.donate-amount {
+    color: var(--text-light)
 }
 
-.donate-card {
-    /* margin: auto !important; */
+.donate-tier-container {
     padding: 20px;
-    text-decoration: none;
 }
 
-.donate-spacer {
-    width: 29.1666666667%;
+.donate-tier {
+    background-color: var(--box-dark);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.5s;
+    text-align: center;
 }
 
 .donate-element {
-    font-size: 60px;
+    font-size: 80px;
 }
 
-.donate-container {
-    background-color: var(--box-dark) !important;
-    border-radius: 24px;
-    text-align: center;
-    aspect-ratio: 1;
-    padding-top: 20px;
-    transition: transform 0.5s;
-}
-
-.donate-container:hover {
-    transform: scale(1.1) !important;
+.donate-tier:hover {
+    transform: scale(1.03);
 }
 
 #platinum-element {
@@ -54,21 +43,21 @@ Contribute page styles
     -webkit-text-fill-color: transparent;
     margin-top: 40px;
 }
-#gold-element {
+#GoldElement {
     background: -webkit-linear-gradient(135deg, #ffff72, #464610);
     background: linear-gradient(135deg, #ffff72, #464610);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#silver-element {
+#SilverElement {
     background: -webkit-linear-gradient(135deg, white, black);
     background: linear-gradient(135deg, white, black);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#bronze-element {
+#BronzeElement {
     background: -webkit-linear-gradient(135deg, #ce8957, #24150c);
     background: linear-gradient(135deg, #ce8957, #24150c);
     background-clip: text;
@@ -76,11 +65,40 @@ Contribute page styles
     -webkit-text-fill-color: transparent;
 }
 
-.donate-name {
+.tier-name {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    margin-bottom: 4px;
 }
 
-.donate-amount {
-    color: var(--text-light)
+.price-range {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.donate-button {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.benefits {
+    text-align: left;
+}
+
+.benefit-icon {
+    margin-top: -4px;
+    margin-right: 8px;
+}
+
+.benefit {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.included {
+    color: var(--text-light);
+}
+
+.disincluded {
+    color: var(--text-dark);
 }

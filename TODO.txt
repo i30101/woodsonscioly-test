@@ -1,2 +1,4 @@
-TODO fix mobile styling
-TODO figure out how to change animation distance
+TODO consider making pages more OOP-based
+- TODO Page class
+- TODO BlogPage class
+- TODO implement new classes

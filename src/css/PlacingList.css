@@ -7,6 +7,16 @@ Tablist styles
 */
 
 
+.placing-container {
+    width: 100%;
+    text-align: center;
+}
+
+.placing-list {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
 
 .nav-tabs {
     padding-bottom: 1px;

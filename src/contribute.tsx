@@ -16,90 +16,101 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import './css/contribute.css'
 import Title from './components/Title';
 
+import check from './assets/site/check.svg'
+import x from './assets/site/x.svg'
+import { formatDiagnosticsWithColorAndContext } from 'typescript';
 
-interface DonateProps {
-    levels: string[];
-    benefits: string[][];
+
+const allBenefits = [
+    "Logo on website",
+    "Logo on club banner", 
+    "Logo on club shirts",
+    "Logo on team builds",
+    "Post on club social media",
+    "Monthly newsletter mentions",
+    "Sponsor Night invitation",
+    "Sponsor Night guest speaker"
+]
+
+
+interface DonateTierProps {
+    symbol: string;
+    name: string;
+    minCost: string;
+    maxCost: string;
+    includedBenefits: number[];
 }
 
 
-// https://ehire.webflow.io/#about-us   
+const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, includedBenefits}) => {
+    const benefitsList = [];
 
+    // const includedList = [];
+    for (const includedIndex of includedBenefits) {
+        benefitsList.push(
+            <div className="benefit included">
+                <img src={check} className="benefit-icon" />
+                {allBenefits[includedIndex]}
+            </div>
+        )
+    }
 
-const DonateList: React.FC<DonateProps> = ({levels, benefits}) => {
-    const tabIDs = levels.map((level, index) => {
-        return level + "Tab";
-    })
+    for (var i = 0; i < allBenefits.length; i++) {
+        if (!includedBenefits.includes(i)) {
+            benefitsList.push(
+            <div className="benefit disincluded">
+                <img src={x} className="benefit-icon" />
+                {allBenefits[i]}
+            </div>
+            )
+        }
+    }
 
-    const contentIDs = levels.map((level, index) => {
-        return level + "Content";
-    })    
     
-    return <></>
-}
 
-
-function quad() {
-    return <div className="primary-section row" id="donate-row">
-        <div className="donate-spacer d-none d-md-block"></div>
-        <a href="/" className="donate-card col-xs-12 col-sm-12 col-md-5 col-lg-5" data-aos="fade-up">
-            <div className="donate-container">
-                <div className="donate-element" id="platinum-element">Pt</div>
-                <div className="donate-name">Platinum Sponsor</div>
-                <div className="donate-amount">$2,000 - $15,000</div>
-            </div>
-        </a>
-        {/* <div className="donate-spacer d-none d-md-block"></div> */}
-        <a href="/" className="donate-card col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-up">
-            <div className="donate-container">
-                <div className="donate-element" id="bronze-element">CuSn</div>
-                <div className="donate-name">Bronze Sponsor</div>
-                <div className="donate-amount">$200 - $500</div>
-            </div>
-        </a>
-        <a href="/" className="donate-card col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div className="donate-container">
-                <div className="donate-element" id="silver-element">Ag</div>
-                <div className="donate-name">Silver Sponsor</div>
-                <div className="donate-amount">$500 - $1,000</div>
-            </div>
-        </a>
-        <a href="/" className="donate-card col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div className="donate-container">
-                <div className="donate-element" id="gold-element">Au</div>
-                <div className="donate-name">Gold Sponsor</div>
-                <div className="donate-amount">$1,000 - $2,000</div>
-            </div>
-        </a>
+    return <div className="donate-tier-container col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-up">
+        <div className="donate-tier">
+            <div className="donate-element" id={name + "Element"}>{symbol}</div>
+            <div className="tier-name">{name} Sponsor</div>
+            <div className="price-range">${minCost} - ${maxCost}</div>
+            <a className="btn sign-in-button donate-button" type="submit" href="#footer">Donate now</a>
+            <div className="benefits">{benefitsList}</div>
+        </div>
     </div>
 }
+
+// https://ehire.webflow.io/#about-us   
 
 
 function Contribute() {
     return <>
         <Title title="" highlight="Contribute" after="to WSO" subtitle=""></Title>
+        
+        <div className="heading-1" data-aos="fade-up">Sponsorship Levels</div>
 
-        <div className="primary-section">
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-            <li className="nav-item" role="presentation">
-            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-            </li>
-            <li className="nav-item" role="presentation">
-            <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-            </li>
-            <li className="nav-item" role="presentation">
-            <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-            </li>
-            <li className="nav-item" role="presentation">
-            <button className="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Disabled</button>
-            </li>
-            </ul>
-            <div className="tab-content" id="myTabContent">
-            <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab">...</div>
-            <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab">...</div>
-            <div className="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab">...</div>
-            </div>
+        <div className="donate-tier-container row">
+            <DonateTier 
+                symbol="CuSn" 
+                name="Bronze" 
+                minCost="500" 
+                maxCost="999" 
+                includedBenefits={[0, 1]} 
+            />
+            <DonateTier 
+                symbol="Ag" 
+                name="Silver" 
+                minCost="1,000" 
+                maxCost="1,999" 
+                includedBenefits={[0, 1, 2, 6]} 
+            />
+            <DonateTier 
+                symbol="Au" 
+                name="Gold" 
+                minCost="2,000" 
+                maxCost="5,000"
+                includedBenefits={[0, 1, 2, 3, 4, 5, 6, 7]} 
+            />
+
         </div>
     </>
 }
