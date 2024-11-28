@@ -264,8 +264,8 @@ function Team() {
                 placings={placings2025}
                 first={
                     <div>
-                        <div>18 medals</div>
-                        <div>Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
+                        <div className="season-text">18 medals</div>
+                        <div className="season-text">Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
                     </div>
                 } />
         </div>
@@ -280,9 +280,9 @@ function Team() {
                         placings={placings2024}
                         first={
                             <div>
-                                <div>72 medals</div>
-                                <div>3 trophies</div>
-                                <div>Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk</div>
+                                <div className="season-text">72 medals</div>
+                                <div className="season-text">3 trophies</div>
+                                <div className="season-text">Alternates: Christopher Hwang, Sonan Sahgal, Samuel Indyk</div>
                             </div>
                         }
                     />
@@ -294,8 +294,8 @@ function Team() {
                         placings={placings2023}
                         first={
                             <div>
-                                <div>54 medals</div>
-                                <div>3 trophies</div>
+                                <div className="season-text">54 medals</div>
+                                <div className="season-text">3 trophies</div>
                             </div>
                         }
                     />

@@ -11,7 +11,7 @@ import React from 'react';
 
 
 // styling
-import '../css/BlogPage.css'
+import '../components-css/BlogPage.css'
 
 
 interface BlogProps {

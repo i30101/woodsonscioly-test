@@ -9,7 +9,7 @@
 // styling
 
 import '../css/style.css'
-import '../css/Title.css'
+import '../components-css/Title.css'
 
 
 interface TitleProps {

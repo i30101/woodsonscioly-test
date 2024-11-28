@@ -145,3 +145,8 @@ table {
     font-size: 14px;
     color: var(--text-light) !important;
 }
+
+
+.season-text {
+    margin-bottom: 10px;
+}

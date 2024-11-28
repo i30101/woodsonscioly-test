@@ -18,7 +18,7 @@ import Title from './components/Title';
 
 import check from './assets/site/check.svg'
 import x from './assets/site/x.svg'
-import { formatDiagnosticsWithColorAndContext } from 'typescript';
+import okta from './assets/site/okta.svg'
 
 
 var delay = 0;
@@ -74,7 +74,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
 
     return <div className="donate-tier-container col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay={delay}>
         <div className="donate-tier">
-            <div className="donate-element" id={name + "Element"}>{symbol}</div>
+            <div className={"donate-element " + name}>{symbol}</div>
             <div className="tier-name">{name} Sponsor</div>
             <div className="price-range">${minCost} - ${maxCost}</div>
             <a className="btn sign-in-button donate-button" type="submit" href="#footer">Donate now</a>
@@ -94,31 +94,30 @@ function Contribute() {
             <div className="heading-1" data-aos="fade-up">Sponsorship Levels</div>
 
             <div className="donate-tier-container row">
-                <DonateTier 
-                    symbol="CuSn" 
-                    name="Bronze" 
-                    minCost="500" 
-                    maxCost="999" 
+                <DonateTier symbol="CuSn" name="Bronze" minCost="500" maxCost="999" 
                     includedBenefits={[0, 1]} 
                 />
-                <DonateTier 
-                    symbol="Ag" 
-                    name="Silver" 
-                    minCost="1,000" 
-                    maxCost="1,999" 
+                <DonateTier symbol="Ag" name="Silver" minCost="1,000" maxCost="1,999" 
                     includedBenefits={[0, 1, 2, 6]} 
                 />
-                <DonateTier 
-                    symbol="Au" 
-                    name="Gold" 
-                    minCost="2,000" 
-                    maxCost="5,000"
+                <DonateTier symbol="Au" name="Gold" minCost="2,000" maxCost="5,000"
                     includedBenefits={[0, 1, 2, 3, 4, 5, 6, 7]} 
                 />
             </div>
         </div>
 
-        
+        <div className="primary-section">
+            <div className="heading-1" data-aos="fade-up">Current Sponsors</div>
+
+            <div className="row current-sponsor-category" data-aos="fade-up">
+                <div className="csc-name col-xs-12 col-sm-12 col-md-6 col-lg-6 Bronze">
+                    Bronze Sponsors
+                </div>
+                <div className="csc-logos col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img src={okta} className="csc-logo" />
+                </div>
+            </div>
+        </div>
 
     </>
 }

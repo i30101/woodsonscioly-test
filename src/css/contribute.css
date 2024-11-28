@@ -22,7 +22,7 @@ Contribute page styles
 .donate-tier {
     background-color: var(--box-dark);
     border-radius: 16px;
-    padding: 24px;
+    padding: 40px 30px 30px 30px;
     transition: transform 0.5s;
     text-align: center;
 }
@@ -35,29 +35,34 @@ Contribute page styles
     transform: scale(1.03);
 }
 
-#platinum-element {
+
+
+/* #platinum-element {
     background: -webkit-linear-gradient(135deg, white, #5a5a5a);
     background: linear-gradient(135deg, white, #8a8a8a);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 40px;
-}
-#GoldElement {
+} */
+
+.Gold {
     background: -webkit-linear-gradient(135deg, #ffff72, #464610);
     background: linear-gradient(135deg, #ffff72, #464610);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#SilverElement {
+
+.Silver {
     background: -webkit-linear-gradient(135deg, white, black);
     background: linear-gradient(135deg, white, black);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#BronzeElement {
+
+.Bronze {
     background: -webkit-linear-gradient(135deg, #ce8957, #24150c);
     background: linear-gradient(135deg, #ce8957, #24150c);
     background-clip: text;
@@ -68,16 +73,17 @@ Contribute page styles
 .tier-name {
     color: white;
     font-size: 25px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .price-range {
     color: var(--text-light);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .donate-button {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     width: 100%;
 }
 
@@ -92,7 +98,7 @@ Contribute page styles
 
 .benefit {
     font-size: 18px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .included {
@@ -101,4 +107,19 @@ Contribute page styles
 
 .disincluded {
     color: var(--text-dark);
+}
+
+
+.current-sponsor-category {
+    margin: 100px auto auto auto;
+    max-width: 1000px;
+}
+
+.csc-name {
+    text-align: left;
+    font-size: 40px;
+}
+
+.csc-logo {
+    max-width: 400px;
 }

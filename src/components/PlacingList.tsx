@@ -13,8 +13,8 @@ import 'bootstrap'
 
 
 // styling
-import '../css/Navbar.css'
-import '../css/PlacingList.css'
+import '../components-css/Navbar.css'
+import '../components-css/PlacingList.css'
 import '../css/style.css'
 
 const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
