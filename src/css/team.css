@@ -13,9 +13,11 @@ Team page styles
 
 
 .accordion-item {
-    margin-bottom: 20px;
-    background-color: var(--box-light);
+    /* margin-bottom: 20px; */
+    margin: 0 auto 20px auto;
+    background-color: var(--box-dark);
     border-radius: var(--accordion-border) !important;
+    max-width: 1000px;
 }
 
 .accordion-button, .accordion-collapse, .accordion-button:hover, .accordion-button:active, .accordion-button:focus {
@@ -27,7 +29,7 @@ Team page styles
 .accordion-button:not(.collapsed){
     outline: none;
     box-shadow: none;
-    background-color: var(--box-light) !important;
+    background-color: var(--box-dark) !important;
 }
 
 .accordion-button {
@@ -109,7 +111,7 @@ Team page styles
 
 
 .accordion-collapse {
-    background-color: var(--box-light) !important;
+    background-color: var(--box-dark) !important;
     border-bottom-left-radius: var(--accordion-border);
     border-bottom-right-radius: var(--accordion-border);
     padding: 8px 28px 20px 28px;

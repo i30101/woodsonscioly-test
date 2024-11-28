@@ -13,6 +13,7 @@ Leadership page styles
     padding: 40px;
     margin-bottom: 60px;
     transition: transform 0.001s;
+    text-align: left;
 }
 
 .bio-container:hover {

@@ -75,6 +75,7 @@ body {
     min-height: calc(100vh - 94px);
     max-width: var(--max-body-width);
     margin: auto;
+    text-align: center;
 }
 
 

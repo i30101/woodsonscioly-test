@@ -37,6 +37,10 @@ root.render(
 function Index() {
     return <>
         <Title title="C. G. Woodson" highlight="Science Olympiad" after="" subtitle="Pioneers in science, engineering, and inter-disciplinary exploration."></Title>
+
+        <div className="primary-section">
+            
+        </div>
     </>
 }
 

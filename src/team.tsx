@@ -264,7 +264,7 @@ function Team() {
                 placings={placings2025}
                 first={
                     <div>
-                        <div>7 medals</div>
+                        <div>18 medals</div>
                         <div>Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
                     </div>
                 } />
