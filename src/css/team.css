@@ -43,7 +43,7 @@ Team page styles
 }
 
 .accordion-button::after, .accordion-button:not(.collapsed)::after {
-    background-image: url('../assets/site/chevron-right.png');
+    background-image: url('../assets/icons/chevron-right.svg');
 }
 
 .accordion-item {

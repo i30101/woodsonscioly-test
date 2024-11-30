@@ -118,8 +118,10 @@ Contribute page styles
 .csc-name {
     text-align: left;
     font-size: 40px;
+    line-height: 100%;
 }
 
 .csc-logo {
     max-width: 400px;
+    margin-bottom: 60px;
 }

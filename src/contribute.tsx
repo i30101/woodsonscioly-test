@@ -15,10 +15,12 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import './css/contribute.css'
 import Title from './components/Title';
+import ContactContainer from './components/Contact';
 
-import check from './assets/site/check.svg'
-import x from './assets/site/x.svg'
+import check from './assets/icons/check.svg'
+import x from './assets/icons/x.svg'
 import okta from './assets/site/okta.svg'
+import ptso from './assets/site/woodson-ptso.png'
 
 
 var delay = 0;
@@ -28,6 +30,7 @@ const allBenefits = [
     "Logo on club banner", 
     "Logo on club shirts",
     "Logo on team builds",
+    "Logo in trophy case",
     "Post on club social media",
     "Monthly newsletter mentions",
     "Sponsor Night invitation",
@@ -86,6 +89,10 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
 // https://ehire.webflow.io/#about-us   
 
 
+
+
+
+
 function Contribute() {
     return <>
         <Title title="" highlight="Contribute" after="to WSO" subtitle=""></Title>
@@ -101,7 +108,7 @@ function Contribute() {
                     includedBenefits={[0, 1, 2, 6]} 
                 />
                 <DonateTier symbol="Au" name="Gold" minCost="2,000" maxCost="5,000"
-                    includedBenefits={[0, 1, 2, 3, 4, 5, 6, 7]} 
+                    includedBenefits={[0, 1, 2, 3, 4, 5, 6, 7, 8]} 
                 />
             </div>
         </div>
@@ -111,14 +118,20 @@ function Contribute() {
 
             <div className="row current-sponsor-category" data-aos="fade-up">
                 <div className="csc-name col-xs-12 col-sm-12 col-md-6 col-lg-6 Bronze">
-                    Bronze Sponsors
+                    <p>Bronze Sponsors</p>
                 </div>
                 <div className="csc-logos col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <img src={okta} className="csc-logo" />
+                    <a href="https://www.okta.com" target='_blank' className="csc-logo-url">
+                        <img src={okta} className="csc-logo" />
+                    </a>
+                    <a href="https://woodsonptso.ptboard.com/" target='_blank' className="csc-logo-url">
+                        <img src={ptso} className="csc-logo" />
+                    </a>
                 </div>
             </div>
         </div>
 
+        <ContactContainer />
     </>
 }
 
