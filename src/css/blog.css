@@ -7,7 +7,7 @@ Blog page styles
 */
 
 
-.blog-container {
+.blog-preview-container {
     text-align: center;
     padding: 30px;
     transition: transform 0.5s;
@@ -15,35 +15,33 @@ Blog page styles
     margin-bottom: 40px;
 }
 
-.blog-container:hover {
+.blog-preview-container:hover {
     transform: scale(1.03) !important;
 }
 
-.blog-image {
+.blog-preview-image {
     width: 100%;
     margin-bottom: 24px;
     border-radius: 24px;
 }
 
-.blog-category {
+.blog-preview-category {
     color: var(--primary-blue);
     background-color: var(--primary-backdrop);
     padding: 4px 12px 4px 12px;
     font-size: 15px;
     border-radius: 8px;
-    /* width: 120px; */
     margin: auto;
     font-weight: 500;
-    margin-bottom: 12px;
 }
 
-.blog-title {
+.blog-preview-title {
     font-size: 36px;
     font-weight: 700;
     color: white;
-    margin-bottom: 12px;
+    margin: 10px auto 10px auto;
 }
 
-.blog-date {
+.blog-preview-date {
     color: var(--text-light);
 }

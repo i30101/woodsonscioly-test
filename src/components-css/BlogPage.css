@@ -8,9 +8,71 @@ Blog page styles
 
 
 .intro-container {
-    width: calc(100vw - 21px) !important;
-    background-color: blue;
-    height: calc(100vh - 94px);
-    margin-left: calc(-1 * calc(calc(100vw - 21px) - var(--max-body-width)) / 2);
-    overflow-x: hidden;
+    margin: 80px auto 80px auto;
+    text-align: center;
+}
+
+.blog-title {
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    margin: auto auto 12px auto;
+}
+
+.blog-subtitle {
+    margin: auto;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.blog-date {
+    margin-left: 12px;
+}
+
+.blog-image {
+    max-width: 800px;
+    margin-top: 40px;
+    border-radius: 24px;
+}
+
+.blog-body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blog-main {
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 180%;
+}
+
+.detail-label {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.detail {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.blog-main > * {
+    margin-bottom: 30px;
+}
+
+.blog-main > h1 {
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.blog-main > q {
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    border-left: 2px solid var(--text-dark);
+    display: block;
+    padding-left: 20px;
+    margin-left: 20px;
 }

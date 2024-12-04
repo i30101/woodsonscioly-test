@@ -27,7 +27,7 @@ import Leadership from './leadership';
 import Contribute from './contribute';
 import Team from './team';
 import Blog from './blog';
-import Georgia2025 from './blog/georgia2025';
+import { Season2024, September2024, Georgia2025, Mvso2025 } from './components/Blogs';
 
 
 
@@ -54,7 +54,10 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/tryouts" element={<Tryouts />} />
                 <Route path="/contribute" element={<Contribute />} />
+                <Route path="/blog/season2024" element={<Season2024 />} />
+                <Route path="/blog/september2024" element={<September2024 />} />
                 <Route path="/blog/georgia2025" element={<Georgia2025 />} />
+                <Route path="/blog/mvso2025" element={<Mvso2025 />} />
             </Routes>
         </Router>
     );
