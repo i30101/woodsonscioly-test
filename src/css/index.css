@@ -1,0 +1,24 @@
+/* 
+Author: Andrew Kim
+Version: 0.0.1
+Since: 5 December 2024
+
+Leadership page styles
+*/
+
+
+#subtitle {
+    margin-bottom: 50px;
+}
+
+.heading {
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subheading {
+    color: var(--text-light);
+    font-size: 18px;
+}

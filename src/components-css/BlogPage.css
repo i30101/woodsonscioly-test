@@ -38,6 +38,7 @@ Blog page styles
 .blog-body {
     max-width: 1200px;
     margin: auto;
+    text-align: left;
 }
 
 .blog-main {
@@ -75,4 +76,8 @@ Blog page styles
     display: block;
     padding-left: 20px;
     margin-left: 20px;
+}
+
+b {
+    color: white;
 }

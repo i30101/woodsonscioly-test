@@ -70,7 +70,7 @@ function Blog() {
                 image={season2024}
                 category="Blog"
                 title="2023-2024: Season in Review"
-                date="October 24th, 2024"
+                date="June 12th, 2024"
                 path="./blog/season2024"
             />
         </div>

@@ -19,7 +19,7 @@ import Footer from './Footer';
 
 function Body({ children }: {children: React.ReactNode}) {
     return (
-        <div id="body">
+        <div id="body" data-aos="fade-up">
             {children}
         </div>
     );

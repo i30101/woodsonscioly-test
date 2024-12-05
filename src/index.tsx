@@ -17,11 +17,16 @@ import ReactDOM from 'react-dom/client';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import './css/style.css'
+import './css/index.css'
+import './components-css/Title.css'
 
 // classes
 import App from './App';
-import Page from './components/Page';
-
+import Navbar from './components/Navbar';
+import Title from './components/Title';
+import Footer from './components/Footer';
+import Body from './components/Body';
+import ActionButton from './components/ActionButton';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -34,12 +39,23 @@ root.render(
 );
 
 
+
+
 function Index() {
-    return <Page title="C. G. Woodson" highlight="Science Olympiad" after="" subtitle="Pioneers in science, engineering, and inter-disciplinary exploration">
-        <div className="primary-section">
-            
+    return <>
+        <Navbar />
+        <div id="intro">
+            <h1 data-aos="fade-up" id="title">
+                C. G. Woodson <span id="highlight">Science Olympiad</span>
+            </h1>
+            <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">Pioneers in science, engineering, and inter-disciplinary exploration</h6>
+            <ActionButton href="#main" text="Learn More"/>
         </div>
-    </Page>
+        <Body>
+            <div className="primary-section" id="#main"></div>
+        </Body>
+        <Footer />
+    </>
 }
 
 export default Index;
