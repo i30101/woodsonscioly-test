@@ -110,31 +110,14 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
         <div className="tab-content">
             {
                 contentIDs.map((item, index) => (
-                    <>
-                        {(index === 0) ?
-                            (
-                                <div 
-                                    className="tab-pane show active" 
-                                    id={item} 
-                                    role="tabpanel" 
-                                    aria-labelledby={tabIDs[index]}
-                                >
-                                    {first}
-                                </div>
-                            ) :
-                            (
-                                <div 
-                                    className="tab-pane fade" 
-                                    id={item} 
-                                    role="tabpanel" 
-                                    aria-labelledby={tabIDs[index]}
-                                >
-                                    {contents[index - 1]}
-                                </div>
-                            )
-
-                        }
-                    </>
+                    (index === 0) ?
+                        <div className="tab-pane show active" id={item} role="tabpanel" aria-labelledby={tabIDs[index]} >
+                            {first}
+                        </div>
+                        :
+                        <div className="tab-pane fade" id={item} role="tabpanel" aria-labelledby={tabIDs[index]} >
+                            {contents[index - 1]}
+                        </div>
                 ))
             }
         </div>
