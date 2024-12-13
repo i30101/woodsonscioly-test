@@ -23,10 +23,10 @@ import './components-css/Title.css'
 // classes
 import App from './App';
 import Navbar from './components/Navbar';
-import Title from './components/Title';
 import Footer from './components/Footer';
 import Body from './components/Body';
 import ActionButton from './components/ActionButton';
+import Quote from './components/Quote';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -49,10 +49,14 @@ function Index() {
                 C. G. Woodson <span id="highlight">Science Olympiad</span>
             </h1>
             <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">Pioneers in science, engineering, and inter-disciplinary exploration</h6>
-            <ActionButton href="#main" text="Learn More"/>
+            <div data-aos="fade-up">
+                <ActionButton href="#main" text="Learn More"/>
+            </div>
         </div>
         <Body>
-            <div className="primary-section" id="#main"></div>
+            <div className="primary-section" id="#main">
+                <Quote author="Jamie Kim" position="Vice President" quote="lorem" />
+            </div>
         </Body>
         <Footer />
     </>

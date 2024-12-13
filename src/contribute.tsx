@@ -8,7 +8,6 @@
 
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -56,7 +55,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
     for (const includedIndex of includedBenefits) {
         benefitsList.push(
             <div className="benefit included">
-                <img src={check} className="benefit-icon" />
+                <img src={check} className="benefit-icon" alt="benefit icon" />
                 {allBenefits[includedIndex]}
             </div>
         )
@@ -66,7 +65,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
         if (!includedBenefits.includes(i)) {
             benefitsList.push(
             <div className="benefit disincluded">
-                <img src={x} className="benefit-icon" />
+                <img src={x} className="benefit-icon" alt="benefit icon" />
                 {allBenefits[i]}
             </div>
             )
@@ -119,11 +118,19 @@ function Contribute() {
                     <p>Bronze Sponsors</p>
                 </div>
                 <div className="csc-logos col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://www.okta.com" target='_blank' className="csc-logo-url">
-                        <img src={okta} className="csc-logo" />
+                    <a href="https://www.okta.com" target='_blank' className="csc-logo-url" rel="noreferrer">
+                        <img src={okta} className="csc-logo" alt="csc-logo" />
                     </a>
-                    <a href="https://woodsonptso.ptboard.com/" target='_blank' className="csc-logo-url">
-                        <img src={ptso} className="csc-logo" />
+                </div>
+            </div>
+
+            <div className="row current-sponsor-category" data-aos="fade-up">
+                <div className="csc-name col-xs-12 col-sm-12 col-md-6 col-lg-6 Silver">
+                    <p>Silver Sponsors</p>
+                </div>
+                <div className="csc-logos col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <a href="https://woodsonptso.ptboard.com/" target='_blank' className="csc-logo-url" rel="noreferrer">
+                        <img src={ptso} className="csc-logo" alt="csc-logo" />
                     </a>
                 </div>
             </div>

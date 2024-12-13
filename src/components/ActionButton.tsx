@@ -13,7 +13,7 @@ interface ActionButtonProps {
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({text, href}) => {
-    return <a href={href} className="action-button" data-aos="fade-up" data-aos-delay="300">{text}</a>
+    return <a href={href} className="action-button">{text}</a>
 }
 
 export default ActionButton;

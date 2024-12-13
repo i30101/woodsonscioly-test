@@ -54,6 +54,7 @@ body {
     color: var(--background);
     font-size: 18px;
     border-radius: 50vh;
+    transition: background-color 0.5s;
 }
 
 .action-button:hover, .action-button:active {

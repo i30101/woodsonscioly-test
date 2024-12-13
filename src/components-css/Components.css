@@ -1,0 +1,49 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 13 December 2024
+
+Components styles
+*/
+
+.quote-box {
+    background-color: var(--box-dark);
+    max-width: 800px;
+    border-radius: 24px;
+    text-align: left;
+    padding: 40px;
+}
+
+.quote-text {
+    color: var(--text-light);
+}
+
+.quote-icon {
+    display: inline-block;
+    border-radius: 50vh;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: var(--box-light);
+    margin-right: 16px;
+}
+
+.quote-icon > img {
+    width: 60%;
+}
+
+.quote-details {
+    display: inline-block;
+}
+
+.quote-author {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.quote-position {
+    color: var(--text-light);
+}
+
+
+
