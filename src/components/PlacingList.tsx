@@ -27,26 +27,39 @@ interface TablistProps {
     first: ReactNode;
 }
 
-// TODO update to 3 columns of palcements
 const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) => {
-    const tabIDs = titles.map((item, index) => {
+    const tabIDs = titles.map((_, index) => {
         return "tab" + year + "-" + index;
     });
 
-    const contentIDs = titles.map((item, index) => {
+    const contentIDs = titles.map((_, index) => {
         return "content" + year + "-" + index;
     })
     
-    const contents: ReactNode[] = placings.map((competition, index) => {
-        const competitionDict = placings[index];
+    const contents: ReactNode[] = placings.map((competition) => {
+        const competitionDict = competition;
 
         const placements = [];
-        for (const key in competitionDict) {
-            const keyNum = parseInt(key);
-            if (keyNum !== 0) {
-                placements.push(
-                    <div className="rank"><div className={"rank-icon rank-" + abbreviations[keyNum]}>{keyNum}</div><span className="rank-events"> {competitionDict[keyNum]?.join(", ")}</span></div>
-                )
+        for (const rankRaw in competitionDict) {
+            const rankNum = parseInt(rankRaw);
+            if (rankNum !== 0) {
+                const ranks = competitionDict[rankNum];
+                if (ranks) {
+                    for (const eventRaw in ranks) {
+                        const event = ranks[Number(eventRaw)]
+                        if (event) {
+                            console.log("rankNum: " + rankNum)
+                            if (rankNum !== 0) {
+                                placements.push(
+                                    <div className="rank col-xs-12 col-sm-12 col-md-4 col-lg-4" key={`${rankNum}-${eventRaw}-${event}`}>
+                                        <div className={"rank-icon rank-" + abbreviations[rankNum]}>{rankNum}</div>
+                                        <span className="rank-events">{event}</span>
+                                    </div>
+                                )
+                            }
+                        }
+                    }
+                } 
             }
         }
 
@@ -55,12 +68,12 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
                 <div className="placing-list">
                     {(competitionDict["0"]) ? 
                         (
-                            <div className="overall">{competitionDict["0"]}</div>
+                            <div className="overall">{competitionDict["0"] + ", " + placements.length + " medals"}</div>
                         ) : (
-                            <></>
+                            <div className="overall">{placements.length + " medals"}</div>
                         )
                     }
-                    <div className="placements">
+                    <div className="placements row">
                         {placements}
                     </div>
                 </div>

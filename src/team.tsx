@@ -59,13 +59,13 @@ const placings2023 = [
     {
         2: ["Forestry"],
         3: ["Astronomy"],
-        5: ["Fermi Questions, Forensics"],
-        6: ["It's About Time, WiFi Lab"],
+        5: ["Fermi Questions", "Forensics"],
+        6: ["It's About Time", "WiFi Lab"],
     },
     {
         0: ["4th overall"],
-        1: ["Bridge, Flight, Remote Sensing"],
-        2: ["Experiemntal Design, Flight, Forensics, Forestry"],
+        1: ["Bridge, Flight", "Remote Sensing"],
+        2: ["Experiemntal Design", "Flight", "Forensics", "Forestry"],
         3: ["Forensics"],
         4: ["WIDI"],
         5: ["Anatomy & Physiology"],
@@ -78,20 +78,20 @@ const placings2023 = [
     {
         0: ["3rd overall"],
         1: ["Forensics"],
-        2: ["Detector Building, Forestry, Forestry, It's About Time, Scrambler, Trajectory, WiFi Lab"],
-        3: ["Environmental Chemistry, Experimental Design, Rocks and Minerals"],
-        4: ["Bridge, Dynamic Planet, Fermi Questions"],
-        5: ["Disease Detectives, WIDI"],
-        6: ["Anatomy & Physiology, Chem Lab, Dynamic Planet"],
+        2: ["Detector Building", "Forestry", "Forestry", "It's About Time", "Scrambler", "Trajectory", "WiFi Lab"],
+        3: ["Environmental Chemistry", "Experimental Design", "Rocks and Minerals"],
+        4: ["Bridge", "Dynamic Planet", "Fermi Questions"],
+        5: ["Disease Detectives", "WIDI"],
+        6: ["Anatomy & Physiology", "Chem Lab"," Dynamic Planet"],
     },
     {
         0: ["4th overall"],
         1: ["Forestry"],
-        2: ["Detector Building, Fermi Questions, Green Generation"],
-        3: ["Forensics, It's About Time, Botany"],
-        4: ["Flight, Solar Power"],
-        5: ["Codebusters, Disease Detectives, Environmental Chemistry"],
-        6: ["Remote Sensing, WIDI"],
+        2: ["Detector Building", "Fermi Questions", "Green Generation"],
+        3: ["Forensics", "It's About Time", "Botany"],
+        4: ["Flight", "Solar Power"],
+        5: ["Codebusters", "Disease Detectives", "Environmental Chemistry"],
+        6: ["Remote Sensing", "WIDI"],
     }
 ]
 
@@ -124,14 +124,14 @@ const placings2024 = [
         2: ["Air Trajectory", "Codebusters", "Dynamic Planet", "Ecology", "Geologic Mapping"],
         3: ["Air Trajectory", "Anatomy & Physiology", "Forensics", "Forestry", "Fossils"],
         4: ["Codebusters", "Disease Detectives", "Dynamic Planet", "Fermi Questions", "Forestry", "Robot Tour", "Scrambler", "Tower", "Wind Power"],
-        5: ["Anatomy & Physiology", "Astronomy", "Ecology", "Robot Tour", "Tower"],
+        5: ["Anatomy & Physiology", "Astronomy", "Ecology", "Optics", "Robot Tour", "Tower"],
         6: ["Air Trajectory", "Fermi Questions", "Geologic Mapping"]
     },
     {
         0: ["4th overall"],
         1: ["Codebusters", "Fermi Questions", "Robot Tour"],
-        2: ["Disease Detecties", "Experimental Design", "Geologic Mapping", "Agricultural Science"],
-        3: ["Forensics, Cybersecurity"],
+        2: ["Disease Detectives", "Experimental Design", "Geologic Mapping", "Agricultural Science"],
+        3: ["Forensics", "Cybersecurity"],
         4: ["Air Trajectory", "Anatomy & Physiology", "Forestry", "Microbe Mission", "Wind Power"],
         6: ["Dynamic Planet"]
     }
