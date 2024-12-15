@@ -27,7 +27,7 @@ interface TablistProps {
     first: ReactNode;
 }
 
-
+// TODO update to 3 columns of palcements
 const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) => {
     const tabIDs = titles.map((item, index) => {
         return "tab" + year + "-" + index;

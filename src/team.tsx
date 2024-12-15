@@ -153,7 +153,14 @@ const placings2025 = [
         4: ["Forensics", "Fossils", "Robot Tour"],
         5: ["Entomology", "Microbe Mission", "Tower"],
         6: ["Air Trajectory", "Brainrot Battle"]
-        
+    },
+    {
+        0: ["1st overall"],
+        1: ["Anatomy & Physiology", "Air Trajectory", "Astronomy", "Bungee Drop", "Codebusters", "Disease Detectives", "Electric Vehicle", "Entomology", "Forensics", "Helicopter", "Robot Tour", "Wind Power"],
+        2: ["Dynamic Planet", "Towers"],
+        3: ["Anatomy & Physiology", "Geologic Mapping", "Materials Science"],
+        4: ["Forensics", "Fossils", "Robot Tour", "Towers"],
+        5: ["Bungee Drop", "Chem Lab", "Codebusters", "Dynamic Planet", "Experimental Design", "Geologic Mapping", "Microbe Mission", "Optics"]
     }
 ]
 
@@ -257,11 +264,11 @@ function Team() {
             <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
             <PlacingList
                 year={2025}
-                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational"]}
+                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational", "Flint Hill Invitational"]}
                 placings={placings2025}
                 first={
                     <div>
-                        <div className="season-text">18 medals</div>
+                        <div className="season-text">47 medals</div>
                         <div className="season-text">Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
                     </div>
                 } />
