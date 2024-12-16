@@ -22,3 +22,7 @@ Index page styles
     color: var(--text-light);
     font-size: 18px;
 }
+
+.index-section {
+    margin: 0;
+}

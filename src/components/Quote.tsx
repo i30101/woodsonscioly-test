@@ -15,15 +15,17 @@ import quoteMark from '../assets/icons/quote.svg'
 interface QuoteProps {
     author: string;
     position: string;
-    quote: string;
+    children: React.ReactNode;
 }
 
-function Quote({author, position, quote}: QuoteProps) {
+function Quote({author, position, children}: QuoteProps) {
     return <div className="quote-box">
-        <div className="quote-text">{quote}</div>
-        <div className="quote-details">
+        <div className="quote-text">{children}</div>
+        <div className="quote-info">
             <div className="quote-icon">
-                <img src={quoteMark} alt="quote mark" />
+                <div className="icon-container">
+                    <img src={quoteMark} alt="quote mark" />
+                </div>
             </div>
             <div className="quote-details">
                 <div className="quote-author">{author}</div>

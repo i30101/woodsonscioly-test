@@ -54,8 +54,22 @@ function Index() {
             </div>
         </div>
         <Body>
-            <div className="primary-section" id="#main">
-                <Quote author="Jamie Kim" position="Vice President" quote="lorem" />
+            <div className="primary-section row index-section" id="#main">
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <Quote author="Hannah Do" position="Class of '24">
+                        Mrs. Babcock's room is super nice and cozy, and the back is always overflowing with Scioly materials."
+
+                    </Quote>
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <Quote author="Andrew Kim" position="President, Class of '25">
+                        Woodson Scioly is about much more than studying and taking tests. We ate, traveled, watched the World Cup, and played basketball last season too. I hope future members will enjoy it as much as I did last season."
+                    </Quote>
+                    <Quote author="Nick Tong" position="Build Captain, Class of '25">
+                        Science Olympiad is a gateway for many opportunities, and it itself is an amazing opportunity.
+                    </Quote>
+                </div>
             </div>
         </Body>
         <Footer />
