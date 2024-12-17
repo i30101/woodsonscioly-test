@@ -8,6 +8,7 @@
 
 
 import '../css/team.css'
+import '../css/components/Rankings.css'
 
 const placings2023 = [
     {
@@ -135,14 +136,14 @@ interface RankingProps {
  * @returns dictionary of rankings
  */
 // TODO fix Number constructor
-const Rankings: React.FC<RankingProps> = ({year, compIndex}) => {
+const Rankings: React.FC<RankingProps> = ({ year, compIndex }) => {
     const yearDict = years[year - 2023];
     const placements = [];
     let summary = null;
     if (yearDict && yearDict[compIndex]) {
         const competitionDict = yearDict[compIndex];
-        for (const rankRaw in competitionDict) {  
-            const rankNum = Number(rankRaw);       
+        for (const rankRaw in competitionDict) {
+            const rankNum = Number(rankRaw);
             if (rankNum !== 0 && competitionDict[rankRaw]) {
                 const ranks = competitionDict[rankRaw];
                 for (const eventRaw in ranks) {
@@ -162,19 +163,19 @@ const Rankings: React.FC<RankingProps> = ({year, compIndex}) => {
         }
     }
     return <div className="placing-container">
-    <div className="placing-list">
-        {(summary) ? 
-            (
-                <div className="overall">{summary + ", " + placements.length + " medals"}</div>
-            ) : (
-                <div className="overall">{placements.length + " medals"}</div>
-            )
-        }
-        <div className="placements row">
-            {placements}
+        <div className="placing-list">
+            {(summary) ?
+                (
+                    <div className="overall">{summary + ", " + placements.length + " medals"}</div>
+                ) : (
+                    <div className="overall">{placements.length + " medals"}</div>
+                )
+            }
+            <div className="placements row">
+                {placements}
+            </div>
         </div>
     </div>
-</div>
 }
 
 

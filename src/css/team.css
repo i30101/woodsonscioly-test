@@ -56,64 +56,6 @@ Team page styles
     color: white;
 }
 
-.rank {
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
-
-.rank-events {
-    color: var(--text-light);
-    font-size: 1rem;
-    line-height: 100% !important;
-}
-
-.rank-icon {
-    padding: 2px;
-    border-radius: 14px;
-    color: black;
-    display: inline-block;
-    width: 40px;
-    text-align: center;
-    margin-right: 6px;
-}
-
-.rank-1st {
-    background-color: var(--duo-1);
-}
-
-.rank-2nd {
-    background-color: var(--duo-2);
-}
-
-.rank-3rd {
-    background-color: var(--duo-3);
-}
-
-.rank-4th {
-    background-color: var(--duo-4);
-}
-
-.rank-5th {
-    background-color: var(--duo-5);
-}
-
-.rank-6th {
-    background-color: var(--duo-6);
-}
-
-.rank-7th {
-    background-color: var(--duo-7);
-}
-
-.rank-8th {
-    background-color: var(--duo-8);
-}
-
-.rank-9th {
-    background-color: var(--duo-9);
-}
-
-
 .accordion-collapse {
     background-color: var(--box-dark) !important;
     border-bottom-left-radius: var(--accordion-border);

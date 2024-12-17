@@ -7,6 +7,8 @@ Components styles
 */
 
 
+/* ******************************** QUOTE BOX ******************************** */
+
 .quote-box {
     background-color: var(--box-dark);
     max-width: 800px;
@@ -44,7 +46,6 @@ Components styles
 }
 
 /* TODO move up quote details */
-
 .quote-details {
     display: inline-block;
 }
@@ -62,3 +63,45 @@ Components styles
 
 
 
+/* ******************************** PLACING LIST ******************************** */
+.placing-container {
+    width: 100%;
+    text-align: center;
+}
+
+.placing-list {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    line-height: 150%;
+}
+
+.nav-tabs {
+    padding-bottom: 1px;
+    border-bottom: 2px solid var(--primary-blue);
+    text-align: center;
+    margin: auto;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-blue);
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-item {
+    margin: auto;
+}
+
+.tablist-link {
+    text-align: center;
+    margin: auto;
+    border: none !important;
+    transition: border, 0.5s;
+}
+
+.tab-pane {
+    padding: 20px;
+    color: white;
+}

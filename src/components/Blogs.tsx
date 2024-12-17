@@ -10,8 +10,6 @@
 import BlogPage from './BlogPage';
 import Rankings from './Rankings';
 
-import '../css/components/PlacingList.css'
-
 import season2024 from '../assets/blog/season2024.jpg'
 import september2024 from '../assets/blog/september2024.jpg'
 import georgia2025 from '../assets/blog/georgia2025.jpg'
@@ -107,19 +105,6 @@ export function Mvso2025() {
         category="Competition"
     >
         <h1>Performance Review</h1>
-        <ul>
-            <li>Air Trajectory (6th): Ada Qin, Nicolas Tong</li>
-            <li>Brainrot Battle (6th): Shaheer Khan, Ryan Chong</li>
-            <li>Codebusters (2nd): Andrew Kim, Katie Yen, Mortan Altier</li>
-            <li>Entomology (5th): James Kim, Ivy Zhao</li>
-            <li>Forensics (4th): Maddie Cho, Shaheer Khan</li>
-            <li>Fossils (4th): Ivy Zhao, Morgan Altier</li>
-            <li>Helicopter (1st): Timothy Lin-Lee, Catherine Han</li>
-            <li>Microbe Mission (5th): Elaina Wi, Ian Gonzalez</li>
-            <li>Robot Tour (4th): Andrew Kim, Matthew Lee</li>
-            <li>Tower (2nd): Katie Yen, Andrew Kim</li>
-            <li>Tower (5th): Laurent Pham, Maria Wang</li>
-        </ul>
         <div className="placements row">
             <Rankings year={2025} compIndex={2} />
         </div>

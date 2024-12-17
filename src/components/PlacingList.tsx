@@ -14,8 +14,8 @@ import 'bootstrap'
 
 // styling
 import '../css/components/Navbar.css'
-import '../css/components/PlacingList.css'
 import '../css/style.css'
+import '../css/components.css'
 import Rankings from './Rankings'
 
 const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
@@ -36,7 +36,7 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
         return "content" + year + "-" + index;
     })
     
-    // make more concise
+    // TODO make more concise
     const contents: ReactNode[] = titles.map((_, index) => {
         return <Rankings year={year} compIndex={index} />;
     });
