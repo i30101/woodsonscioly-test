@@ -16,6 +16,7 @@ import 'bootstrap'
 import '../css/components/Navbar.css'
 import '../css/components/PlacingList.css'
 import '../css/style.css'
+import Rankings from './Rankings'
 
 const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
 
@@ -23,11 +24,10 @@ const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "
 interface TablistProps {
     year: number;
     titles: ReactNode[];
-    placings: Array<Partial<Record<number, string[]>>>;
     first: ReactNode;
 }
 
-const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) => {
+const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
     const tabIDs = titles.map((_, index) => {
         return "tab" + year + "-" + index;
     });
@@ -36,49 +36,9 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, placings, first}) =>
         return "content" + year + "-" + index;
     })
     
-    const contents: ReactNode[] = placings.map((competition) => {
-        const competitionDict = competition;
-
-        const placements = [];
-        for (const rankRaw in competitionDict) {
-            const rankNum = parseInt(rankRaw);
-            if (rankNum !== 0) {
-                const ranks = competitionDict[rankNum];
-                if (ranks) {
-                    for (const eventRaw in ranks) {
-                        const event = ranks[Number(eventRaw)]
-                        if (event) {
-                            console.log("rankNum: " + rankNum)
-                            if (rankNum !== 0) {
-                                placements.push(
-                                    <div className="rank col-xs-12 col-sm-12 col-md-4 col-lg-4" key={`${rankNum}-${eventRaw}-${event}`}>
-                                        <div className={"rank-icon rank-" + abbreviations[rankNum]}>{rankNum}</div>
-                                        <span className="rank-events">{event}</span>
-                                    </div>
-                                )
-                            }
-                        }
-                    }
-                } 
-            }
-        }
-
-        return (
-            <div className="placing-container">
-                <div className="placing-list">
-                    {(competitionDict["0"]) ? 
-                        (
-                            <div className="overall">{competitionDict["0"] + ", " + placements.length + " medals"}</div>
-                        ) : (
-                            <div className="overall">{placements.length + " medals"}</div>
-                        )
-                    }
-                    <div className="placements row">
-                        {placements}
-                    </div>
-                </div>
-            </div>
-        )
+    // make more concise
+    const contents: ReactNode[] = titles.map((_, index) => {
+        return <Rankings year={year} compIndex={index} />;
     });
 
     const tabList = <div className="placing-list">

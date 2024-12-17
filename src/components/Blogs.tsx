@@ -8,6 +8,9 @@
 
 
 import BlogPage from './BlogPage';
+import Rankings from './Rankings';
+
+import '../css/components/PlacingList.css'
 
 import season2024 from '../assets/blog/season2024.jpg'
 import september2024 from '../assets/blog/september2024.jpg'
@@ -117,5 +120,8 @@ export function Mvso2025() {
             <li>Tower (2nd): Katie Yen, Andrew Kim</li>
             <li>Tower (5th): Laurent Pham, Maria Wang</li>
         </ul>
+        <div className="placements row">
+            <Rankings year={2025} compIndex={2} />
+        </div>
     </BlogPage>
 }

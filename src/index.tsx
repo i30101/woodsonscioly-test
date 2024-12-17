@@ -60,12 +60,6 @@ function Index() {
                     <Quote author="Hannah Do" position="Class of '24">
                         Mrs. Babcock's room is super nice and cozy, and the back is always overflowing with Scioly materials."
                     </Quote>
-                    <Quote author="Matthew Lee" position="Build Captain, Class of '25">
-                        You want to live in New Zealand? What is their language?
-                    </Quote>
-                    <Quote author="James Kim" position="Treasurer, Class of '25">
-                        I like minors because they're cute and obedient. 
-                    </Quote>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <Quote author="Andrew Kim" position="President, Class of '25">
@@ -73,9 +67,6 @@ function Index() {
                     </Quote>
                     <Quote author="Nick Tong" position="Build Captain, Class of '25">
                         Science Olympiad is a gateway for many opportunities, and it itself is an amazing opportunity.
-                    </Quote>
-                    <Quote author="Dylan Nguyen" position="States Member, Class of '25">
-                        Science Olympiad is good for sleep.
                     </Quote>
                 </div>
             </div>

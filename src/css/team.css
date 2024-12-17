@@ -53,14 +53,18 @@ Team page styles
 .overall {
     margin-bottom: 15px;
     font-weight: 800;
+    color: white;
 }
 
 .rank {
     margin-bottom: 8px;
+    font-size: 1rem;
 }
 
 .rank-events {
     color: var(--text-light);
+    font-size: 1rem;
+    line-height: 100% !important;
 }
 
 .rank-icon {
