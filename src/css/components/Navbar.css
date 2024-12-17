@@ -64,12 +64,12 @@ Navbar styles
 }
 
 .navbar-toggler-icon {
-    background-image: url('../assets/icons/menu.svg') !important;
+    background-image: url('../../assets/icons/menu.svg') !important;
     border: none;
 }
 
 .navbar-toggler-icon::selection {
-    background-image: url('../assets/icons/menu.svg') !important;
+    background-image: url('../../assets/icons/menu.svg') !important;
 }
 
 

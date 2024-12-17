@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom/client';
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
-import './components-css/BlogPage.css'
+import './css/components/BlogPage.css'
 
 import Page from './components/Page';
 import BlogPage from './components/BlogPage';

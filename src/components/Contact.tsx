@@ -10,7 +10,7 @@
 import React from "react";
 
 
-import '../components-css/Contact.css'
+import '../css/components/Contact.css'
 import github from '../assets/icons/github.svg'
 import envelope from '../assets/icons/envelope.svg'
 import instagram from '../assets/icons/instagram.svg'

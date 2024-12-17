@@ -10,12 +10,11 @@
 import React from 'react';
 
 import Navbar from './Navbar';
-import Body from './Body';
 import Footer from './Footer';
 
 
 // styling
-import '../components-css/BlogPage.css'
+import '../css/components/BlogPage.css'
 
 
 interface BlogProps {

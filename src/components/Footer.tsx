@@ -11,7 +11,7 @@ import React from 'react';
 
 // styling
 import '../css/style.css';
-import '../components-css/Footer.css';
+import '../css/components/Footer.css';
 
 
 // files

@@ -12,7 +12,7 @@ import 'bootstrap'
 
 
 // styling
-import '../components-css/Navbar.css'
+import '../css/components/Navbar.css'
 import '../css/style.css'
 
 

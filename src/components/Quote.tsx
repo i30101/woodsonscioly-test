@@ -7,7 +7,7 @@
  */
 
 
-import '../components-css/Components.css'
+import '../css/components.css'
 
 import quoteMark from '../assets/icons/quote.svg'
 
