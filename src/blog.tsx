@@ -8,13 +8,11 @@
 
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 // styling
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import './css/blog.css'
-import Title from './components/Title';
 import Page from './components/Page'
 
 
@@ -22,6 +20,7 @@ import season2024 from './assets/blog/season2024.jpg'
 import september2024 from './assets/blog/september2024.jpg'
 import georgia2025 from './assets/blog/georgia2025.jpg'
 import mvso2025 from './assets/blog/mvso2025.jpg'
+import fh2025 from './assets/blog/fh2025.jpg'
 
 
 interface BlogContainerProps {
@@ -45,34 +44,11 @@ const BlogContainer: React.FC<BlogContainerProps> = ({title, date, image, catego
 function Blog() {
     return <Page title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do.">
          <div className="primary-section row">
-            <BlogContainer
-                image={mvso2025}
-                category="Competitions"
-                title="2025 Monta Vista Invitational Results"
-                date="October 25th, 2024"
-                path="./blog/mvso2025"
-            />
-             <BlogContainer
-                image={georgia2025}
-                category="Competitions"
-                title="2025 Georgia Scrimmage Results"
-                date="October 24th, 2024"
-                path="./blog/georgia2025"
-            />
-            <BlogContainer
-                image={september2024}
-                category="Newsletter"
-                title="September 2024 Newsletter"
-                date="September 10, 2024"
-                path="./blog/september2024"
-            />
-            <BlogContainer
-                image={season2024}
-                category="Blog"
-                title="2023-2024: Season in Review"
-                date="June 12th, 2024"
-                path="./blog/season2024"
-            />
+            <BlogContainer image={fh2025} category="Competitions" title="2025 Flint Hill Invitational Results" date="December 17th, 2024" path="./blog/fh2025" />
+            <BlogContainer image={mvso2025} category="Competitions" title="2025 Monta Vista Invitational Results" date="November 25th, 2024" path="./blog/mvso2025"/>
+            <BlogContainer image={georgia2025} category="Competitions" title="2025 Georgia Scrimmage Results" date="October 24th, 2024" path="./blog/georgia2025"/>
+            <BlogContainer image={september2024} category="Newsletter" title="September 2024 Newsletter" date="September 10, 2024" path="./blog/september2024"/>
+            <BlogContainer image={season2024} category="Blog" title="2023-2024: Season in Review" date="June 12th, 2024" path="./blog/season2024"/>
         </div>
     </Page>
 }

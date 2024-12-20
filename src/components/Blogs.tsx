@@ -14,6 +14,7 @@ import season2024 from '../assets/blog/season2024.jpg'
 import september2024 from '../assets/blog/september2024.jpg'
 import georgia2025 from '../assets/blog/georgia2025.jpg'
 import mvso2025 from '../assets/blog/mvso2025.jpg'
+import fh2025 from '../assets/blog/fh2025.jpg'
 
 
 export function Season2024() {
@@ -39,7 +40,7 @@ export function Season2024() {
         <h1>Season in Review: President's Remarks</h1>
         <p>Now that the season has come to a close, I would like to thank everyone on the Science Olympiad team this year for their remarkable dedication and hard work. Our competitors, for working on their notes and builds despite two cancelled competitions. Our officers, for serving their club on top of their difficult events. And Mrs. Babcock, for her ever-present passion and widsom.</p>
         <p>And of course, I would like to thank our caring and supportive parents. Your commitment as volunteers, chauffers, and chaperones is a face of WSO that always deserves more appreciation. I thank you all for providing your children with so many resources that allowed us to succeed, and understanding the cancellations that must have been a logistical nightmare to all households.</p>
-        <p>As the departing Vice President and the incoming President, I have to say that I certainly learned a lot this season.</p>
+        <p>As the departing Vice President and the incoming President, I have to say that I certainly learned a lot this season. I will share those lessons with my officers, States members, and everyone else on the team to make the 2024-2025 season even better than the least. I look forward to a season filled with trophies, medals, and cheers!</p>
     </BlogPage>
 }
 
@@ -81,15 +82,7 @@ export function Georgia2025() {
         <p>For this year's Georgia Scrimmage, Woodson Science Olypmiad competitors took tests across a three-day period, from Tuesday, November 15th to Thursday, November 17th. During these days, Mrs. Babcock was crowded with exam takers for hours after school, showing the dedication of our members.</p>
         <h1>Performance Review</h1>
         <p>Woodson Science Olympiad had a strong start to its 2024-2025 season at the Georiga Scrimmage. Pitted against 88 other Division C teams, team Godzilla prevailed, ranking 2nd. This meant Woodson beat 2 other schools that attended the 2023-2024 Nationals Tournament, Marquette University High School and the Fulton Science Academy. Teams Rodan and Mothra ranked 25th and 35th, respectively, a strong showing for the Regionals teams. Individual event rankings were as follows: </p>
-        <ul>
-            <li>Anatomy and Physiology (9th): Elaina Wi, Ian Gonzalez</li>
-            <li>Codebusters (2nd): Andrew Kim, Katie Yen, Mortan Altier</li>
-            <li>Ecology (8th): James Kim, Ivy Zhao</li>
-            <li>Entomology (2nd): James Kim, Ivy Zhao</li>
-            <li>Fossils (3rd): Ivy Zhao, Morgan Altier</li>
-            <li>Optics (3rd): Matthew Lee, Timothy Lin-Lee</li>
-            <li>Wind Power (5th): Matthew Lee, Timothy Lin-Lee</li>
-        </ul>
+        <Rankings year={2025} compIndex={0} />
         <p>Build Captain Matthew Lee shared his positive thoughts on the tournament's results. Given how early it is in the season, Lee believed "the studies did really great" and the team had "really exceeded expectations." In regards to Lee's personal event rankings, this Georgia Scrimmage "was my best yet." Looking ahead, Lee said "Our strong team performance gives me an optimistic outlook for the rest of the season."</p>
         <q>Our strong team performance gives me an optimistic outlook for the rest of the season.</q>
         <p>The Georgia Scrimmage was one of six comeptitions planned for the 2024-2025 season. Our next and last virtual invitational, hosted by Monta Vista High School, will be in mid-November. Happy studying and building!</p>
@@ -98,15 +91,26 @@ export function Georgia2025() {
 
 export function Mvso2025() {
     return <BlogPage
-        title="2025 Monta Vista Invitational"
+        title="2025 Monta Vista Invitational Results"
         date="25 November 2024"
         author="Andrew Kim"
         image={mvso2025}
         category="Competition"
     >
         <h1>Performance Review</h1>
-        <div className="placements row">
+        <Rankings year={2025} compIndex={1} />
+    </BlogPage>
+}
+
+export function FlintHill2025() {
+    return <BlogPage
+        title="2025 Flint Hill Invitational Results"
+        date="17 November 2024"
+        author="Andrew Kim"
+        image={fh2025}
+        category="Competition">
+            <h1>Performance Review</h1>
             <Rankings year={2025} compIndex={2} />
-        </div>
+            <p>Once again, we would like to thank Mrs. Babcock, parents, event supervisors, and anyone involved in facilitating our amazing performace at Flint Hill. Our incredible placings would not have been possible without you all!</p>
     </BlogPage>
 }

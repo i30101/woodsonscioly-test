@@ -135,7 +135,6 @@ interface RankingProps {
  * @param compIndex index of competition attended
  * @returns dictionary of rankings
  */
-// TODO fix Number constructor
 const Rankings: React.FC<RankingProps> = ({ year, compIndex }) => {
     const yearDict = years[year - 2023];
     const placements = [];
