@@ -1,2 +1,0 @@
-TODO add ranking TS file
-TODO add ranking JSONs

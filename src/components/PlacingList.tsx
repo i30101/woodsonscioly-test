@@ -28,18 +28,17 @@ interface TablistProps {
 }
 
 const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
-    const tabIDs = titles.map((_, index) => {
-        return "tab" + year + "-" + index;
-    });
+    const tabIDs = titles.map((_, index) => (
+        "tab" + year + "-" + index
+    ));
 
-    const contentIDs = titles.map((_, index) => {
-        return "content" + year + "-" + index;
-    })
+    const contentIDs = titles.map((_, index) => (
+        "content" + year + "-" + index
+    ));
     
-    // TODO make more concise
-    const contents: ReactNode[] = titles.map((_, index) => {
-        return <Rankings year={year} compIndex={index} />;
-    });
+    const contents: ReactNode[] = titles.map((_, index) => (
+        <Rankings year={year} compIndex={index} />
+    ));
 
     const tabList = <div className="placing-list">
         <ul className="nav nav-tabs" role="tablist">
