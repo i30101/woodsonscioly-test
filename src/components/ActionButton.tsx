@@ -12,8 +12,10 @@ interface ActionButtonProps {
     href: string;
 }
 
+
 const ActionButton: React.FC<ActionButtonProps> = ({text, href}) => {
     return <a href={href} className="action-button">{text}</a>
 }
+
 
 export default ActionButton;

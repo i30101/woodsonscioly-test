@@ -9,16 +9,11 @@
 
 // external libraries
 import React, { ReactNode } from 'react'
-import 'bootstrap'
 
 
-// styling
-import '../css/components/Navbar.css'
-import '../css/style.css'
-import '../css/components.css'
+// components
 import Rankings from './Rankings'
 
-const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
 
 
 interface TablistProps {
@@ -26,6 +21,7 @@ interface TablistProps {
     titles: ReactNode[];
     first: ReactNode;
 }
+
 
 const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
     const tabIDs = titles.map((_, index) => (

@@ -7,16 +7,8 @@
  */
 
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle'
-import './css/components/BlogPage.css'
-
+// components
 import Page from './components/Page';
-import BlogPage from './components/BlogPage';
 
 
 function Tryouts() {

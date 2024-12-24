@@ -7,14 +7,15 @@
  */
 
 
+// external libraries
 import React, { ReactNode } from 'react';
-import ReactDOM from 'react-dom/client';
 
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-import './css/leadership.css'
 
+// components
+import Page from './components/Page';
+
+
+// assets
 import andrew from './assets/images/andrew.jpg'
 import jamie from './assets/images/jamie.jpg'
 import james from './assets/images/james.jpg'
@@ -22,7 +23,7 @@ import nick from './assets/images/nick.jpg'
 import morgan from './assets/images/morgan.jpg'
 import matthew from './assets/images/matthew.jpg'
 
-import Page from './components/Page';
+
 
 interface BioProps {
     name: string;

@@ -7,19 +7,17 @@
  */
 
 
-import React from 'react';
-
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle'
-import './css/contribute.css'
+// components
 import Page from './components/Page';
 import ContactContainer from './components/Contact';
 
+
+// assets
 import check from './assets/icons/check.svg'
 import x from './assets/icons/x.svg'
 import okta from './assets/site/okta.svg'
 import ptso from './assets/site/woodson-ptso.png'
+
 
 
 var delay = 0;

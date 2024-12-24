@@ -7,17 +7,13 @@
  */
 
 
+// external libraries
 import React, { ReactNode, useState } from 'react';
 
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 
+// components
 import Page from './components/Page';
 import PlacingList from './components/PlacingList';
-
-import './css/team.css'
-
 
 
 

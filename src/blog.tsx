@@ -7,15 +7,11 @@
  */
 
 
-import React from 'react';
-
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-import './css/blog.css'
+// components
 import Page from './components/Page'
 
 
+// assets
 import season2024 from './assets/blog/season2024.jpg'
 import september2024 from './assets/blog/september2024.jpg'
 import georgia2025 from './assets/blog/georgia2025.jpg'

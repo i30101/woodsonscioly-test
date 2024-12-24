@@ -7,17 +7,9 @@
  */
 
 
-// external libraries
-import 'bootstrap'
-
-
-// styling
-import '../css/components/Navbar.css'
-import '../css/style.css'
-
-
-// files
+// assets
 import cog from '../assets/site/cog.png';
+
 
 
 /**
@@ -58,12 +50,13 @@ function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="300">
-                        <button className="btn sign-in-button" type="submit">Log in</button>
+                        <a href="../login"><button className="btn sign-in-button" type="submit">Log in</button></a>
                     </form>
                 </div>
             </div>
         </nav>
     );
 }
+
 
 export default Navbar;

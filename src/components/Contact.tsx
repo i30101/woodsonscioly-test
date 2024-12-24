@@ -7,13 +7,11 @@
  */
 
 
-import React from "react";
-
-
-import '../css/components/Contact.css'
+// assets
 import github from '../assets/icons/github.svg'
 import envelope from '../assets/icons/envelope.svg'
 import instagram from '../assets/icons/instagram.svg'
+
 
 
 var serviceDelay = -50;

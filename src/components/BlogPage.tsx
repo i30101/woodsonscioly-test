@@ -7,14 +7,10 @@
  */
 
 
-import React from 'react';
-
+// components
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-
-// styling
-import '../css/components/BlogPage.css'
 
 
 interface BlogProps {
@@ -25,8 +21,6 @@ interface BlogProps {
     image: any;
     category: string;
 }
-
-
 
 
 const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, category}) => {
@@ -61,6 +55,5 @@ const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, ca
         <Footer />
     </>
 }
-
 
 export default BlogPage;

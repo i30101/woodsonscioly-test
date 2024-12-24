@@ -7,9 +7,6 @@
  */
 
 
-import '../css/team.css'
-import '../css/components/Rankings.css'
-
 const placings2023 = [
     {
         2: ["Forestry"],
@@ -176,8 +173,6 @@ const Rankings: React.FC<RankingProps> = ({ year, compIndex }) => {
         </div>
     </div>
 }
-
-
 
 
 export default Rankings;

@@ -7,26 +7,20 @@
  */
 
 
-
 // external libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-// styling
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
-import './css/style.css'
-import './css/index.css'
-import './css/components/Title.css'
-
-// classes
+// components
 import App from './App';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Body from './components/Body';
 import ActionButton from './components/ActionButton';
 import Quote from './components/Quote';
+
+
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

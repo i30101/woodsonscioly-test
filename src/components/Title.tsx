@@ -6,11 +6,6 @@
  * Title element
  */
 
-// styling
-
-import '../css/style.css'
-import '../css/components/Title.css'
-
 
 interface TitleProps {
     title: string;
@@ -18,6 +13,7 @@ interface TitleProps {
     after: string;
     subtitle: string;
 }
+
 
 function Title({title, highlight, after, subtitle}: TitleProps) {
     return <div id="intro">
@@ -27,5 +23,6 @@ function Title({title, highlight, after, subtitle}: TitleProps) {
         <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">{subtitle}</h6>
     </div>
 }
+
 
 export default Title;

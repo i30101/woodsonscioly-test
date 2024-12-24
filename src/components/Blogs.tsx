@@ -7,14 +7,18 @@
  */
 
 
+// components
 import BlogPage from './BlogPage';
 import Rankings from './Rankings';
 
+
+// assets
 import season2024 from '../assets/blog/season2024.jpg'
 import september2024 from '../assets/blog/september2024.jpg'
 import georgia2025 from '../assets/blog/georgia2025.jpg'
 import mvso2025 from '../assets/blog/mvso2025.jpg'
 import fh2025 from '../assets/blog/fh2025.jpg'
+
 
 
 export function Season2024() {

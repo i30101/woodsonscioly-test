@@ -11,10 +11,12 @@ interface SpacerProps {
     height: number;
 }
 
+
 const Spacer: React.FC<SpacerProps> = ({height}) => {
     const spacer = <div className="spacer" style={{height: height + "px"}}></div>
     
     return spacer;
 }
+
 
 export default Spacer;

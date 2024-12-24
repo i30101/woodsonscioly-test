@@ -6,15 +6,8 @@
  * Footer element
  */
 
-import React from 'react';
 
-
-// styling
-import '../css/style.css';
-import '../css/components/Footer.css';
-
-
-// files
+// assets
 import logo from '../assets/site/full-logo.png'
 
 
@@ -47,5 +40,6 @@ function Footer() {
         </div>
     )
 }
+
 
 export default Footer;

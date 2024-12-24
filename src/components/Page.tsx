@@ -7,12 +7,12 @@
  */
 
 
-import React from "react";
-
+// components
 import Navbar from "./Navbar";
 import Title from "./Title";
 import Body from "./Body";
 import Footer from "./Footer";
+
 
 
 interface PageProps {
@@ -22,6 +22,7 @@ interface PageProps {
     after: string;
     subtitle: string;
 }
+
 
 const Page: React.FC<PageProps> = ({children, title, highlight, after, subtitle}) => (
     <>

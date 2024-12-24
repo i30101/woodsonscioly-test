@@ -7,9 +7,9 @@
  */
 
 
-import '../css/components.css'
-
+// assets
 import quoteMark from '../assets/icons/quote.svg'
+
 
 
 interface QuoteProps {
@@ -17,6 +17,7 @@ interface QuoteProps {
     position: string;
     children: React.ReactNode;
 }
+
 
 function Quote({author, position, children}: QuoteProps) {
     return <div className="quote-box">
@@ -34,5 +35,6 @@ function Quote({author, position, children}: QuoteProps) {
         </div>
     </div>
 }
+
 
 export default Quote;
