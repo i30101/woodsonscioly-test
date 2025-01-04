@@ -58,7 +58,7 @@ interface TableProps {
 }
 
 const MemberTable: React.FC<TableProps> = ({names, members}) => {
-    return <table className="table team-table">
+    return <table className="table">
         <thead>
             <tr>
                 {Array.from({length: 3}, (_, i) => (

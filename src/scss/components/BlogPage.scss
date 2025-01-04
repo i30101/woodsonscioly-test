@@ -21,7 +21,7 @@ Blog page styles
 
 .blog-subtitle {
     margin: auto;
-    color: var(--text-light);
+    color: $text-light;
     font-weight: 500;
 }
 
@@ -42,18 +42,18 @@ Blog page styles
 }
 
 .blog-main {
-    color: var(--text-light);
+    color: $text-light;
     font-size: 18px;
     line-height: 180%;
 }
 
 .detail-label {
-    color: var(--text-light);
+    color: $text-light;
     font-size: 14px;
 }
 
 .detail {
-    color: var(--primary-blue);
+    color: $primary-blue;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -72,7 +72,7 @@ Blog page styles
     color: white;
     font-style: italic;
     font-size: 20px;
-    border-left: 2px solid var(--text-dark);
+    border-left: 2px solid $text-dark;
     display: block;
     padding-left: 20px;
     margin-left: 20px;

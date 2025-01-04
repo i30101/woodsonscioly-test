@@ -147,7 +147,7 @@ const Rankings: React.FC<RankingProps> = ({ year, compIndex }) => {
                     if (event && rankNum !== 0) {
                         placements.push(
                             <div className="rank col-xs-12 col-sm-12 col-md-4 col-lg-4" key={`${rankRaw}-${eventRaw}-${event}`}>
-                                <div className={"rank-icon rank-" + abbreviations[rankNum]}>{rankRaw}</div>
+                                <div className={"rank-icon rank-" + rankRaw}>{rankRaw}</div>
                                 <span className="rank-events">{event}</span>
                             </div>
                         )

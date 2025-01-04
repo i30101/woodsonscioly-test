@@ -1,10 +1,22 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 12 September 2024
+
+Ranking styles
+*/
+
+
+@import '../variables.scss';
+
+
 .rank {
     margin-bottom: 8px;
     font-size: 1rem;
 }
 
 .rank-events {
-    color: var(--text-light);
+    color: $text-light;
     font-size: 1rem;
     display: inline-block;
     line-height: 100% !important;
@@ -20,38 +32,61 @@
     margin-right: 6px;
 }
 
-.rank-1st {
-    background-color: var(--duo-1);
+@for $i from 1 through length($duo-colors) {
+    .rank-#{$i} {
+        background-color: nth($duo-colors, $i);
+    }
 }
 
-.rank-2nd {
-    background-color: var(--duo-2);
+
+
+/* ******************************** PLACING LIST ******************************** */
+
+.placing-container {
+    width: 100%;
+    text-align: center;
 }
 
-.rank-3rd {
-    background-color: var(--duo-3);
+.placing-list {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    line-height: 150%;
 }
 
-.rank-4th {
-    background-color: var(--duo-4);
+.nav-tabs {
+    padding-bottom: 1px;
+    border-bottom: 2px solid $primary-blue;
+    text-align: center;
+    margin: auto;
 }
 
-.rank-5th {
-    background-color: var(--duo-5);
+.nav-tabs .nav-link.active {
+    color: $primary-blue;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
 }
 
-.rank-6th {
-    background-color: var(--duo-6);
+.nav-item {
+    margin: auto;
 }
 
-.rank-7th {
-    background-color: var(--duo-7);
+.tablist-link {
+    text-align: center;
+    margin: auto;
+    border: none !important;
+    transition: border, 0.5s;
 }
 
-.rank-8th {
-    background-color: var(--duo-8);
+.tab-pane {
+    padding: 20px;
+    color: white;
 }
 
-.rank-9th {
-    background-color: var(--duo-9);
+
+.overall {
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: white;
 }

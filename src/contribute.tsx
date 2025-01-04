@@ -83,7 +83,6 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
     </div>
 }
 
-// https://ehire.webflow.io/#about-us   
 
 
 

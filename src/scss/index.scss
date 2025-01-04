@@ -7,6 +7,10 @@ Index page styles
 */
 
 
+@import './variables.scss';
+
+
+
 #subtitle {
     margin-bottom: 50px;
 }
@@ -19,7 +23,7 @@ Index page styles
 }
 
 .subheading {
-    color: var(--text-light);
+    color: $text-light;
     font-size: 18px;
 }
 

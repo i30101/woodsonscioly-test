@@ -7,6 +7,9 @@ Navbar styles
 */
 
 
+@import '../variables.scss';
+
+
 .navbar {
     background-color: #050c1a !important;
     color: white;
@@ -49,14 +52,14 @@ Navbar styles
     padding: 6px 20px 20px 20px;
     border: 2px solid ;
     border-radius: 20px;
-    color: var(--primary-purple);
+    color: $primary-purple;
     transition: background-color 0.5s;
     margin: auto;
 }
 
 .sign-in-button:hover, .sign-in-button:active, .sign-in-button:focus{
-    background-color: var(--primary-purple) !important;
-    color: var(--background) !important;
+    background-color: $primary-purple !important;
+    color: $background !important;
 }
 
 .navbar-toggler:focus {

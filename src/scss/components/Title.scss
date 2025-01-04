@@ -19,14 +19,14 @@ Title styles
 }
 
 #highlight {
-    color: var(--primary-blue);
-    background-color: var(--primary-backdrop);
+    color: $primary-blue;
+    background-color: $primary-backdrop;
     padding: 0 10px;
     border-radius: 10px;
 }
 
 #subtitle {
-    color: var(--text-light);
+    color: $text-light;
     font-weight: 400;
     margin-top: 30px;
     font-size: 18px;

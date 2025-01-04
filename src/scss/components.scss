@@ -7,10 +7,13 @@ Components styles
 */
 
 
+@import './variables.scss';
+
+
 /* ******************************** QUOTE BOX ******************************** */
 
 .quote-box {
-    background-color: var(--box-dark);
+    background-color: $box-dark;
     max-width: 800px;
     border-radius: 24px;
     text-align: left;
@@ -19,7 +22,7 @@ Components styles
 }
 
 .quote-text {
-    color: var(--text-light);
+    color: $text-light;
     margin-bottom: 20px;
     line-height: 1.8;
 }
@@ -38,7 +41,7 @@ Components styles
     border-radius: 50vh;
     width: 50px;
     aspect-ratio: 1;
-    background-color: var(--box-light);
+    background-color: $box-light;
 }
 
 .icon-container > img {
@@ -57,51 +60,28 @@ Components styles
 }
 
 .quote-position {
-    color: var(--text-light);
+    color: $text-light;
     font-size: 14px;
 }
 
 
 
-/* ******************************** PLACING LIST ******************************** */
-.placing-container {
-    width: 100%;
-    text-align: center;
+
+
+
+/* ******************************** ACTION BUTTON ******************************** */
+
+.action-button {
+    padding: 20px 30px;
+    background-color: white;
+    font-weight: 600;
+    color: $background;
+    font-size: 18px;
+    border-radius: 50vh;
+    transition: background-color 0.5s;
 }
 
-.placing-list {
-    max-width: 1000px;
-    margin: auto;
-    text-align: left;
-    line-height: 150%;
-}
-
-.nav-tabs {
-    padding-bottom: 1px;
-    border-bottom: 2px solid var(--primary-blue);
-    text-align: center;
-    margin: auto;
-}
-
-.nav-tabs .nav-link.active {
-    color: var(--primary-blue);
-    background-color: transparent;
-    box-shadow: none;
-    outline: none;
-}
-
-.nav-item {
-    margin: auto;
-}
-
-.tablist-link {
-    text-align: center;
-    margin: auto;
-    border: none !important;
-    transition: border, 0.5s;
-}
-
-.tab-pane {
-    padding: 20px;
+.action-button:hover, .action-button:active {
     color: white;
+    background-color: $primary-purple;
 }

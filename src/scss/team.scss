@@ -7,88 +7,78 @@ Team page styles
 */
 
 
-:root {
-    --accordion-border: 10px;
-}
+@import './variables.scss';
+
+
+$accordion-border: 10px;
 
 
 .accordion-item {
-    /* margin-bottom: 20px; */
     margin: 0 auto 20px auto;
-    background-color: var(--box-dark);
-    border-radius: var(--accordion-border) !important;
+    background-color: $box-dark;
+    border-radius: $accordion-border !important;
     max-width: 1000px;
-}
-
-.accordion-button, .accordion-collapse, .accordion-button:hover, .accordion-button:active, .accordion-button:focus {
-    background-color: var(--box-dark);
-    outline: none;
-    box-shadow: none;
-}
-
-.accordion-button:not(.collapsed){
-    outline: none;
-    box-shadow: none;
-    background-color: var(--box-dark) !important;
-}
-
-.accordion-button {
-    border-radius: var(--accordion-border) !important;
-    font-weight: 800;
-    color: white !important;
-    font-size: 18px;
-    padding: 20px 20px 20px 28px;
-    transition: none;
-    --bs-accordion-btn-icon-transform: rotate(90deg);
-}
-
-.accordion-button::after, .accordion-button:not(.collapsed)::after {
-    background-image: url('../assets/icons/chevron-right.svg');
-}
-
-.accordion-item {
     border: none !important;
-}
 
-.overall {
-    margin-bottom: 15px;
-    font-weight: 800;
-    color: white;
-}
 
-.accordion-collapse {
-    background-color: var(--box-dark) !important;
-    border-bottom-left-radius: var(--accordion-border);
-    border-bottom-right-radius: var(--accordion-border);
-    padding: 8px 28px 20px 28px;
-}
+    .accordion-button, .accordion-collapse, .accordion-button:hover, .accordion-button:active, .accordion-button:focus {
+        background-color: $box-dark;
+        outline: none;
+        box-shadow: none;
+    }
 
+    // accordion toggle arrow button
+    .accordion-button {
+        border-radius: $accordion-border !important;
+        font-weight: 800;
+        color: white !important;
+        font-size: 18px;
+        padding: 20px 20px 20px 28px;
+        transition: none;
+        --bs-accordion-btn-icon-transform: rotate(90deg);
+
+
+        &:not(.collapsed) {
+            outline: none;
+            box-shadow: none;
+            background-color: $box-dark !important;
+        }
+
+        &::after, &:not(.collapsed)::after {
+            background-image: url('../assets/icons/chevron-right.svg');
+        }
+    }
+
+    .accordion-collapse {
+        background-color: $box-dark !important;
+        border-bottom-left-radius: $accordion-border;
+        border-bottom-right-radius: $accordion-border;
+        padding: 8px 28px 20px 28px;
+    }
+}
 
 table {
     max-width: 600px;
     margin: auto;
     text-align: center;
-}
-
-.team-table {
     margin-bottom: 80px;
-}
-
-.team-head, .team-data {
-    background-color: transparent !important;
-    color: white !important;
-    border-bottom: none;
-}
-
-.team-head {
-    font-size: 22px;
-}
-
-
-.team-data {
-    padding: 4px !important;
-    font-size: 14px;
-    color: var(--text-light) !important;
+    
+    .team-head, .team-data {
+        background-color: transparent !important;
+        color: white !important;
+        border-bottom: none;
+    }
+    
+    .team-head {
+        font-size: 22px;
+    }
+    
+    
+    .team-data {
+        padding: 4px !important;
+        font-size: 14px;
+        color: $text-light !important;
+    }
 }
 
 
