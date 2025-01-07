@@ -59,9 +59,8 @@ $accordion-border: 10px;
 
 table {
     max-width: 600px;
-    margin: auto;
     text-align: center;
-    margin-bottom: 80px;
+    margin: auto auto 80px auto;
     
     .team-head, .team-data {
         background-color: transparent !important;

@@ -7,6 +7,8 @@ Contribute page styles
 */
 
 
+@import './variables.scss';
+
 
 .donate-tier-container {
     padding: 20px;
@@ -61,7 +63,7 @@ Contribute page styles
             color: $text-light;
         }
         
-        .disincluded {
+        .excluded {
             color: $text-dark;
         }
     }

@@ -66,7 +66,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
     for (let i = 0; i < allBenefits.length; i++) {
         if (!includedBenefits.includes(i)) {
             benefitsList.push(
-            <div className="benefit disincluded">
+            <div className="benefit excluded">
                 <img src={x} className="benefit-icon" alt="benefit icon" />
                 {allBenefits[i]}
             </div>
