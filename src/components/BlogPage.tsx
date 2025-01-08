@@ -7,6 +7,10 @@
  */
 
 
+// external libraries
+import React from "react";
+
+
 // components
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -37,7 +41,7 @@ const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, ca
                 <span className="blog-preview-category">{category}</span>
                 <span className="blog-date">{date}</span>
             </div>
-            <img src={image} className="blog-image" data-aos="fade-up" data-aos-delay="200" />
+            <img src={image} className="blog-image" data-aos="fade-up" data-aos-delay="200" alt={image}/>
         </div>
         
         <div className="blog-body row" data-aos="fade-up">

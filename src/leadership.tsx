@@ -36,7 +36,7 @@ interface BioProps {
 const OfficerBio: React.FC<BioProps> = ({name, position, grade, image, children}) => {
     return <div className="bio-container row" data-aos="fade-up">
         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <img src={image} className="bio-image" />
+            <img src={image} className="bio-image" alt={image}/>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <h2 className="bio-name">{name}</h2>
@@ -80,7 +80,7 @@ function Leadership() {
                 grade="Senior"
                 image={matthew}
             >
-                I'm a senior interested in electrical engineering and aerospace engineering! I spend my free time either putting together or flying FPV drones for fun, or for projects. I typically spend most of my time in scioly building my 5in notes binders for hybirds or trying to find the next workaround for my build events.
+                I'm a senior interested in electrical engineering and aerospace engineering! I spend my free time either putting together or flying FPV drones for fun, or for projects. I typically spend most of my time in scioly building my 5in notes binders for hybrids or trying to find the next workaround for my build events.
             </OfficerBio>
             <OfficerBio
                 name="Nick Tong"

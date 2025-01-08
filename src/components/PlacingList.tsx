@@ -8,22 +8,21 @@
 
 
 // external libraries
-import React, { ReactNode } from 'react'
+import React, {ReactNode} from 'react'
 
 
 // components
 import Rankings from './Rankings'
 
 
-
-interface TablistProps {
+interface TabList {
     year: number;
     titles: ReactNode[];
     first: ReactNode;
 }
 
 
-const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
+const PlacingList: React.FC<TabList> = ({year, titles, first}) => {
     const tabIDs = titles.map((_, index) => (
         "tab" + year + "-" + index
     ));
@@ -36,35 +35,35 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
         <Rankings year={year} compIndex={index} />
     ));
 
-    const tabList = <div className="placing-list">
+    return <div className="placing-list">
         <ul className="nav nav-tabs" role="tablist">
             {
                 titles.map((item, index) => (
                     <li key={"nav" + index} className="nav-item" role="presentation">
                         {(index === 0) ?
                             (
-                                <button 
-                                    className="nav-link tablist-link link active" 
-                                    id={tabIDs[index]} 
-                                    data-bs-toggle="tab" 
-                                    data-bs-target={"#" + contentIDs[index]} 
-                                    type="button" 
-                                    role="tab" 
-                                    aria-controls={contentIDs[index]} 
+                                <button
+                                    className="nav-link tablist-link link active"
+                                    id={tabIDs[index]}
+                                    data-bs-toggle="tab"
+                                    data-bs-target={"#" + contentIDs[index]}
+                                    type="button"
+                                    role="tab"
+                                    aria-controls={contentIDs[index]}
                                     aria-selected="true"
                                 >
                                     {item}
                                 </button>
                             ) :
                             (
-                                <button 
-                                    className="nav-link tablist-link link" 
-                                    id={tabIDs[index]} 
-                                    data-bs-toggle="tab" 
-                                    data-bs-target={"#" + contentIDs[index]} 
-                                    type="button" 
-                                    role="tab" 
-                                    aria-controls={contentIDs[index]} 
+                                <button
+                                    className="nav-link tablist-link link"
+                                    id={tabIDs[index]}
+                                    data-bs-toggle="tab"
+                                    data-bs-target={"#" + contentIDs[index]}
+                                    type="button"
+                                    role="tab"
+                                    aria-controls={contentIDs[index]}
                                     aria-selected="false"
                                 >
                                     {item}
@@ -79,19 +78,17 @@ const PlacingList: React.FC<TablistProps> = ({year, titles, first}) => {
             {
                 contentIDs.map((item, index) => (
                     (index === 0) ?
-                        <div className="tab-pane show active" id={item} role="tabpanel" aria-labelledby={tabIDs[index]} >
+                        <div className="tab-pane show active" id={item} role="tabpanel" aria-labelledby={tabIDs[index]}>
                             {first}
                         </div>
                         :
-                        <div className="tab-pane fade" id={item} role="tabpanel" aria-labelledby={tabIDs[index]} >
+                        <div className="tab-pane fade" id={item} role="tabpanel" aria-labelledby={tabIDs[index]}>
                             {contents[index - 1]}
                         </div>
                 ))
             }
         </div>
-    </div >
-
-    return tabList;
+    </div>;
 }
 
 

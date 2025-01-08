@@ -7,9 +7,6 @@
  */
 
 
-
-
-// create login page
 function Login() {
     return <>
         <div className="message-container">

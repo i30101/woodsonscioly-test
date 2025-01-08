@@ -7,6 +7,9 @@
  */
 
 
+// import external library
+import React from "react";
+
 // assets
 import quoteMark from '../assets/icons/quote.svg'
 

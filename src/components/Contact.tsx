@@ -7,6 +7,10 @@
  */
 
 
+// external libraries
+import React from "react";
+
+
 // assets
 import github from '../assets/icons/github.svg'
 import envelope from '../assets/icons/envelope.svg'
@@ -14,7 +18,7 @@ import instagram from '../assets/icons/instagram.svg'
 
 
 
-var serviceDelay = -50;
+let serviceDelay = -50;
 
 interface ServiceProps {
     name: string;
@@ -28,7 +32,7 @@ const ContactService: React.FC<ServiceProps> = ({name, contact, url, image}) => 
     serviceDelay += 50;
     return <a href={url} target="_blank" className="service row" data-aos="fade-up" data-aos-delay={serviceDelay}>
         <div className="contact-icon col-2">
-            <img src={image} className="contact-image" />
+            <img src={image} className="contact-image" alt={image}/>
         </div>
         <div className="contact-details col-10">
             <div className="contact-name">{name}</div>

@@ -21,7 +21,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid" id="navbar-contents">
                 <a className="navbar-brand" href="/" data-aos="fade-up">
-                    <img src={cog} id="cog-logo"></img>
+                    <img src={cog} id="cog-logo" alt={cog} />
                     <span className="link d-none d-md-inline-block" id="logo-text">Woodson Scioly</span>
                 </a>
 

@@ -38,7 +38,7 @@ import { Season2024, September2024, Georgia2025, Mvso2025, FlintHill2025 } from 
 import Login from './login';
 
 
-// activate animeate on scroll library
+// activate animate on scroll library
 const useAos = () => {
     useEffect(() => {
         Aos.init({ duration: 600, delay: 100})

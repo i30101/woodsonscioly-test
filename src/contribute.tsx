@@ -7,6 +7,10 @@
  */
 
 
+// external libraries
+import React from "react";
+
+
 // components
 import Page from './components/Page';
 import ContactContainer from './components/Contact';
@@ -20,7 +24,7 @@ import ptso from './assets/site/woodson-ptso.png'
 
 
 
-var delay = 0;
+let delay = 0;
 
 const allBenefits = [
     "Logo on website",
@@ -59,7 +63,7 @@ const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, 
         )
     }
 
-    for (var i = 0; i < allBenefits.length; i++) {
+    for (let i = 0; i < allBenefits.length; i++) {
         if (!includedBenefits.includes(i)) {
             benefitsList.push(
             <div className="benefit disincluded">

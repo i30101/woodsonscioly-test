@@ -8,13 +8,12 @@
 
 
 // external libraries
-import React, { ReactNode, useState } from 'react';
+import React, {ReactNode, useState} from 'react';
 
 
 // components
 import Page from './components/Page';
 import PlacingList from './components/PlacingList';
-
 
 
 const teamNames = {
@@ -69,7 +68,7 @@ const MemberTable: React.FC<TableProps> = ({names, members}) => {
         <tbody>
             {Array.from({length: 15}, (_, i) => (
                 <tr className="team-row">
-                    {members.map((team, index) => (
+                    {members.map((team, _) => (
                         <td className="team-data">{team[i]}</td>
                     ))}
                 </tr>
@@ -92,7 +91,7 @@ interface AccordionItemProps {
 
 /**
  * Creates individual accordion section
- * @param year the last year of the sason
+ * @param year the last year of the season
  * @param names the team names
  * @param members list of members per team
  * @param parent id of parent accordion container
@@ -112,10 +111,10 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
     }
 
     // create accordion item container
-    const accordionItem = (
+    return (
         <div className="accordion-item" id={"accordion" + year}>
             <h2 className="accordion-header" id={headingID}>
-                <button 
+                <button
                     className={`accordion-button ${isCollapsed ? 'collapsed' : ''}`}
                     type="button"
                     data-bs-target={"#" + contentID}
@@ -127,7 +126,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
                 </button>
             </h2>
 
-            <div 
+            <div
                 id={contentID}
                 className={`accordion-collapse collapse ${!isCollapsed ? 'show' : ''}`}
                 aria-labelledby={headingID}
@@ -137,9 +136,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
                 {children}
             </div>
         </div>
-    )
-
-    return accordionItem;
+    );
 }
 
 

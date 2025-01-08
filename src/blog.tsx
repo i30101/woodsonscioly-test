@@ -17,6 +17,7 @@ import september2024 from './assets/blog/september2024.jpg'
 import georgia2025 from './assets/blog/georgia2025.jpg'
 import mvso2025 from './assets/blog/mvso2025.jpg'
 import fh2025 from './assets/blog/fh2025.jpg'
+import React from "react";
 
 
 interface BlogContainerProps {
@@ -29,7 +30,7 @@ interface BlogContainerProps {
 
 const BlogContainer: React.FC<BlogContainerProps> = ({title, date, image, category, path}) => {
     return <a href={path} className="blog-preview-container col-xs-12 col-sm-12 col-md-6 col-lg-6" data-aos="fade-up">
-        <img src={image} className="blog-preview-image" />
+        <img src={image} className="blog-preview-image" alt={image}/>
         <span className="blog-preview-category">{category}</span>
         <div className="blog-preview-title">{title}</div>
         <div className="blog-preview-date">{date}</div>

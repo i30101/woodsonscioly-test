@@ -7,6 +7,10 @@
  */
 
 
+// external libraries
+import React from "react";
+
+
 // components
 import Navbar from "./Navbar";
 import Title from "./Title";

@@ -2,9 +2,13 @@
  * @author Andrew Kim
  * @version 0.0.1
  * @since 17 December 2024
- * 
+ *
  * Rankings
  */
+
+
+// external libraries
+import React from "react";
 
 
 const placings2023 = [
@@ -117,7 +121,6 @@ const placings2025: any = [
 ]
 
 const years = [placings2023, placings2024, placings2025];
-const abbreviations = ["NaN", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
 
 
 interface RankingProps {
