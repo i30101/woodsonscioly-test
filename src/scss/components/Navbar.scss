@@ -62,16 +62,16 @@ Navbar styles
     color: $background !important;
 }
 
-.navbar-toggle:focus {
+.navbar-toggler:focus {
     border: none;
 }
 
-.navbar-toggle-icon {
+.navbar-toggler-icon {
     background-image: url('../../assets/icons/menu.svg') !important;
     border: none;
 }
 
-.navbar-toggle-icon::selection {
+.navbar-toggler-icon::selection {
     background-image: url('../../assets/icons/menu.svg') !important;
 }
 
