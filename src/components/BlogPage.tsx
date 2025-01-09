@@ -28,11 +28,7 @@ interface BlogProps {
 
 
 const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, category}) => {
-    const titleImage = <div className="blog-image" 
-        style={{backgroundImage: `url(${image})`}}
-    />
-
-    return <>
+   return <>
         <Navbar />
 
         <div className="intro-container">

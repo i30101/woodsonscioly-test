@@ -21,7 +21,7 @@ const placings2023 = [
     {
         0: ["4th overall"],
         1: ["Bridge, Flight", "Remote Sensing"],
-        2: ["Experiemntal Design", "Flight", "Forensics", "Forestry"],
+        2: ["Experimental Design", "Flight", "Forensics", "Forestry"],
         3: ["Forensics"],
         4: ["WIDI"],
         5: ["Anatomy & Physiology"],
