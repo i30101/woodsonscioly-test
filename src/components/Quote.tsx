@@ -26,10 +26,8 @@ function Quote({author, position, children}: QuoteProps) {
     return <div className="quote-box">
         <div className="quote-text">{children}</div>
         <div className="quote-info">
-            <div className="quote-icon">
-                <div className="icon-container">
-                    <img src={quoteMark} alt="quote mark" />
-                </div>
+            <div className="icon-container">
+                <img src={quoteMark} alt="quote mark" />
             </div>
             <div className="quote-details">
                 <div className="quote-author">{author}</div>

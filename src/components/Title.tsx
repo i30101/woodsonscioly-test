@@ -17,8 +17,8 @@ interface TitleProps {
 
 function Title({title, highlight, after, subtitle}: TitleProps) {
     return <div id="intro">
-        <h1 data-aos="fade-up" id="title">
-            {title} <span id="highlight">{highlight}</span> {after}
+        <h1 data-aos="fade-up" className="title">
+            {title} <span className="highlight">{highlight}</span> {after}
         </h1>
         <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">{subtitle}</h6>
     </div>
