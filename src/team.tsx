@@ -149,10 +149,10 @@ function Team() {
             <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
             <PlacingList
                 year={2025}
-                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational", "Flint Hill Invitational"]}
+                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational", "Flint Hill Invitational", "Fairfax Invitational"]}
                 first={
                     <div>
-                        <div className="season-text">47 medals</div>
+                        <div className="season-text">71 medals</div>
                         <div className="season-text">Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
                     </div>
                 } />

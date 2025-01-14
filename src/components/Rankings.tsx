@@ -112,11 +112,20 @@ const placings2025: any = [
     },
     {
         0: ["1st overall"],
-        1: ["Anatomy & Physiology", "Air Trajectory", "Astronomy", "Bungee Drop", "Codebusters", "Disease Detectives", "Electric Vehicle", "Entomology", "Forensics", "Helicopter", "Robot Tour", "Wind Power"],
-        2: ["Dynamic Planet", "Towers"],
+        1: ["Air Trajectory", "Anatomy & Physiology", "Astronomy", "Bungee Drop", "Codebusters", "Disease Detectives", "Electric Vehicle", "Entomology", "Forensics", "Helicopter", "Robot Tour", "Wind Power"],
+        2: ["Dynamic Planet", "Tower"],
         3: ["Anatomy & Physiology", "Geologic Mapping", "Materials Science"],
-        4: ["Forensics", "Fossils", "Robot Tour", "Towers"],
+        4: ["Forensics", "Fossils", "Robot Tour", "Tower"],
         5: ["Bungee Drop", "Chem Lab", "Codebusters", "Dynamic Planet", "Experimental Design", "Geologic Mapping", "Microbe Mission", "Optics"]
+    },
+    {
+        0: ["1st overall"],
+        1: ["Air Trajectory", "Anatomy & Physiology", "Entomology", "Helicopter", "Robot Tour"],
+        2: ["Bungee Drop", "Codebusters", "Electric Vehicle", "Geologic Mapping", "Tower"],
+        3: ["Anatomy & Physiology", "Disease Detectives", "Dynamic Planet", "Electric Vehicle", "Microbe Mission", "Wind Power"],
+        4: ["Fossils", "Materials Science", "Tower"],
+        5: ["Astronomy", "Ecology", "Geologic Mapping"],
+        6: ["Entomology", "Forensics"],
     }
 ]
 

@@ -19,14 +19,43 @@ Index page styles
     font-size: 48px;
     color: white;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .subheading {
     color: $text-light;
     font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 70px auto;
 }
 
 .index-section {
     margin: 0;
+}
+
+.value-icon-container {
+    background-color: $box-light;
+    aspect-ratio: 1;
+    width: 90px;
+    margin: auto;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value-icon-container > img {
+    width: 50px;
+}
+
+.value-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0 10px 0;
+}
+
+.value-description {
+    color: $text-light;
+    padding: 0 10px;
 }
