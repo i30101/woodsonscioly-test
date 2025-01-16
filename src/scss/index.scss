@@ -42,11 +42,17 @@ Index page styles
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & > img {
+        width: 50px;
+    }
 }
 
-.value-icon-container > img {
-    width: 50px;
+.side-text {
+    text-align: left !important;
+    padding-right: 40px;
 }
+
 
 .value-name {
     color: white;

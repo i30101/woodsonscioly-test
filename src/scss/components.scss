@@ -19,51 +19,48 @@ Components styles
     text-align: left;
     padding: 36px;
     margin-bottom: 24px;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.03) !important;
+    }
+
+    .quote-text {
+        color: $text-light;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+
+    .quote-info {
+        display: flex;
+
+        .icon-container {
+            margin-right: 16px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 50vh;
+            width: 50px;
+            aspect-ratio: 1;
+            background-color: $box-light;
+
+            & > img {
+                width: 50%;
+            }
+        }
+
+        .quote-author {
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .quote-position {
+            color: $text-light;
+            font-size: 14px;
+        }
+    }
 }
-
-.quote-text {
-    color: $text-light;
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-
-.quote-icon {
-    display: inline-block;
-    margin-right: 16px;
-}
-
-.icon-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    border-radius: 50vh;
-    width: 50px;
-    aspect-ratio: 1;
-    background-color: $box-light;
-}
-
-.icon-container > img {
-    width: 50%;
-}
-
-/* TODO move up quote details */
-.quote-details {
-    display: inline-block;
-}
-
-.quote-author {
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.quote-position {
-    color: $text-light;
-    font-size: 14px;
-}
-
-
 
 
 
@@ -78,9 +75,9 @@ Components styles
     font-size: 18px;
     border-radius: 50vh;
     transition: background-color 0.5s;
-}
 
-.action-button:hover, .action-button:active {
-    color: white;
-    background-color: $primary-purple;
+    &:hover, &:active {
+        color: white;
+        background-color: $primary-purple;
+    }
 }
