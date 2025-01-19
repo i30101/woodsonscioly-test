@@ -132,7 +132,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
                 aria-labelledby={headingID}
                 data-bs-parent={parent}
             >
-                <MemberTable names={names} members={members}></MemberTable>
+                <MemberTable names={names} members={members} />
                 {children}
             </div>
         </div>

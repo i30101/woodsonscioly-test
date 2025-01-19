@@ -61,8 +61,8 @@ function Index() {
     return <>
         <Navbar />
         <div id="intro">
-            <h1 data-aos="fade-up" id="title">
-                C. G. Woodson <span id="highlight">Science Olympiad</span>
+            <h1 data-aos="fade-up" className="title">
+                C. G. Woodson <span className="highlight">Science Olympiad</span>
             </h1>
             <h6 data-aos="fade-up" data-aos-delay="150" id="subtitle">Pioneers in science, engineering, and inter-disciplinary exploration</h6>
             <div data-aos="fade-up">
@@ -84,11 +84,10 @@ function Index() {
             </div>
 
             <div className="primary-section index-section" data-aos="fade-up">
-                <h1 className="heading">What our Members Say</h1>
-                <div className="subheading"></div>
                 <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        test
+                    <div className="side-text col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h1 className="heading">What our <span className="highlight">members</span> say</h1>
+                        <div className="subheading">Hear from current Woodson Science Olympiad members and alumni</div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <Quote author="Hannah Do" position="Class of '24">
