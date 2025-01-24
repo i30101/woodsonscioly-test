@@ -30,8 +30,58 @@ Index page styles
 }
 
 .index-section {
-    margin: 0;
+    margin: 0 0 200px 0 !important;
 }
+
+
+.about {
+    max-width: 800px;
+    margin: auto;
+
+    .about-row {
+        margin-bottom: 40px;
+        background-color: $box-dark;
+        padding: 40px 20px;
+        border-radius: 24px;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(1.03) !important;
+        }
+
+        .about-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .about-icon {
+                width: 60px;
+            }
+        }
+
+        .about-content {
+            text-align: left;
+
+            .about-name {
+                color: white;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+
+            .about-children {
+                color: $text-light;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 .value-icon-container {
     background-color: $box-light;
