@@ -41,7 +41,11 @@ import Login from './login';
 // activate animate on scroll library
 const useAos = () => {
     useEffect(() => {
-        Aos.init({ duration: 600, delay: 100})
+        Aos.init({
+            duration: 600,
+            delay: 100,
+            once: true
+        })
     }, []);
 };
 
