@@ -23,7 +23,7 @@ interface QuoteProps {
 
 
 function Quote({author, position, children}: QuoteProps) {
-    return <div className="quote-box">
+    return <div className="quote-box" data-aos={"fade-up"}>
         <div className="quote-text">{children}</div>
         <div className="quote-info">
             <div className="icon-container">
