@@ -96,7 +96,7 @@ const placings2024 = [
 const placings2025: any = [
     {
         0: ["2nd overall"],
-        2: ["Codebusters", "Etomology"],
+        2: ["Codebusters", "Entomology"],
         3: ["Fossils", "Optics"],
         5: ["Wind Power"],
         8: ["Ecology"],
@@ -126,6 +126,14 @@ const placings2025: any = [
         4: ["Fossils", "Materials Science", "Tower"],
         5: ["Astronomy", "Ecology", "Geologic Mapping"],
         6: ["Entomology", "Forensics"],
+    },
+    {
+        0: ["6th overall"],
+        1: ["Electric Vehicle"],
+        2: ["Helicopter", "Robot Tour"],
+        3: ["Towers", "Wind Power"],
+        5: ["Bungee Drop"],
+        6: ["Codebusters"]
     }
 ]
 
