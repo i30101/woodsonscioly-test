@@ -65,7 +65,7 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({icon, name, children}) => {
-    return <div className="about-row row">
+    return <div className="about-row row" data-aos={"fade-up"}>
         <div className="about-icon-container col-xs-12 col-sm-12 col-md-2 col-lg-2">
             <img src={icon} alt={icon} className={"about-icon"}/>
         </div>
