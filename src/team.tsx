@@ -142,6 +142,7 @@ const SeasonAccordion: React.FC<AccordionItemProps> = ({year, names, members, pa
 
 
 function Team() {
+    document.title = "Our Team | Woodson Science Olympiad";
     const parentID = "teamAccordion";
     return <Page title="Our" highlight="Team" after="" subtitle="Learn about the coolest Science Olympiad team in VA">        
         <div className="primary-section" data-aos="fade-up">
@@ -149,10 +150,10 @@ function Team() {
             <MemberTable names={teamNames[2025]} members={allTeams[2025]}/>
             <PlacingList
                 year={2025}
-                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational", "Flint Hill Invitational", "Fairfax Invitational", "Princeton Invitational"]}
+                titles={["Season Summary", "Georgia Scrimmage", "Monta Vista Invitational", "Flint Hill Invitational", "Fairfax Invitational", "Princeton Invitational", "UMW Regional"]}
                 first={
                     <div>
-                        <div className="season-text">78 medals</div>
+                        <div className="season-text">112 medals</div>
                         <div className="season-text">Alternates: Christian Yoo, Humphrey, Lien Nguyen, Sophia Nguyen, Esther Hwang</div>
                     </div>
                 } />
