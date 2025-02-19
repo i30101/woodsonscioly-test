@@ -12,6 +12,7 @@ import Page from './components/Page';
 
 
 function Tryouts() {
+    document.title = "Tryouts | Woodson Science Olympiad";
     return <Page title="WSO" highlight="Tryouts" after="" subtitle="Learn about WSO's tryouts system.">
         <div className="blog-body row">
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2">
