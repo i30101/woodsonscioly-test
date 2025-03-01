@@ -1,0 +1,44 @@
+/*
+Author: Andrew Kim
+Version: 0.0.1
+Since: 28 February 2025
+
+Login styles
+*/
+
+
+@import './variables.scss';
+
+
+.login-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: $box-light;
+
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-input {
+    outline: none !important;
+    border: 1px solid $line-light !important;
+    font-size: 18px;
+}
+
+.login-input::placeholder {
+    color: $text-dark !important;
+}
+
+.login-input:active, .login-input:focus {
+    border: 1px solid $line-dark !important;
+}
+
+.login-button {
+    height: 54px !important;
+    padding: 20px;
+    background-color: $primary-purple;
+    color: white;
+    font-size: 18px;
+}
+
