@@ -7,14 +7,17 @@
  */
 
 
+
 function Login() {
+    document.title = "Login | Woodson Science Olympiad";
     return <>
-        <div className="message-container">
+        <div className="login-container">
             <div className="message-heading">Log In</div>
             <form action="" method="POST" target="_blank" className="contact-form">
                 <label className="form-section"><input type="hidden" name="_next" value="" /></label>
-                <label className="form-section"><input className="form-input" placeholder="Username" name="username" /></label>
-                <label className="form-section"><input className="form-input" placeholder="Password" name="password" /></label>
+                <label className="form-section"><input className="form-input login-input" placeholder="Username" name="username" /></label>
+                <label className="form-section"><input className="form-input login-input" placeholder="Password" name="password" /></label>
+                <button className="btn login-button" type="submit">Log In</button>
             </form>
         </div>
     </>
