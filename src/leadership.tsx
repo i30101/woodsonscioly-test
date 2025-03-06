@@ -48,6 +48,7 @@ const OfficerBio: React.FC<BioProps> = ({name, position, grade, image, children}
 
 
 function Leadership() {
+    document.title = "Leadership | Woodson Science Olympiad";
     return <Page title="Our" highlight="Leadership" after="" subtitle="Meet our amazing officers!">
         <div className="primary-section">
             <OfficerBio
