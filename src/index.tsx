@@ -79,6 +79,7 @@ const About: React.FC<AboutProps> = ({icon, name, children}) => {
 
 
 function Index() {
+    document.title = "Woodson Science Olympiad";
     return <>
         <Navbar />
         <div id="intro">
