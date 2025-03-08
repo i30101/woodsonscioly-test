@@ -49,6 +49,8 @@ interface DonateTierProps {
 
 
 const DonateTier: React.FC<DonateTierProps> = ({symbol, name, minCost, maxCost, includedBenefits}) => {
+    document.title = "Contribute | Woodson Science Olympiad";
+
     delay += 50;
 
     const benefitsList = [];
