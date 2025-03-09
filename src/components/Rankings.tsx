@@ -134,6 +134,19 @@ const placings2025: any = [
         3: ["Towers", "Wind Power"],
         5: ["Bungee Drop"],
         6: ["Codebusters"]
+    },
+    {
+        0: ["1st overall"],
+        1: ["Air Trajectory", "Bungee Drop", "Codebusters", "Electric Vehicle", "Helicopter", "Microbe Mission", "Robot Tour"],
+        2: ["Anatomy & Physiology", "Entomology", "Forensics", "Optics", "Wind Power"],
+        3: ["Tower"],
+        4: ["Materials Science", "Air Trajectory", "Bungee Drop", "WIDI"],
+        5: ["Disease Detectives", "Experimental Design", "Fossils", "Robot Tour", "Wind Power", "Bungee Drop"],
+        6: ["Codebusters", "Dynamic Planet", "Entomology", "Helicopter"],
+        7: ["Dynamic Planet", "Geologic Mapping", "Tower"],
+        8: ["Tower", "Anatomy & Physiology", "Geologic Mapping"],
+        9: ["Astronomy"]
+
     }
 ]
 
