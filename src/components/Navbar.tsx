@@ -34,7 +34,7 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-md-0" data-aos="fade-up" data-aos-delay="200">
                         <li className="nav-item">
-                            <a className="nav-link navbar-link link" href="../team">The Team</a>
+                            <a className="nav-link navbar-link link" href="../team">Our Team</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link navbar-link link" href="../leadership">Leadership</a>
@@ -50,7 +50,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex" role="search" data-aos="fade-up" data-aos-delay="300">
-                        <a href="../login"><button className="btn sign-in-button" type="submit">Log in</button></a>
+                        <a href="../login" className={"btn sign-in-button"}>Log in</a>
                     </form>
                 </div>
             </div>
