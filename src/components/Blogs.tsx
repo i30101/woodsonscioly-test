@@ -18,6 +18,7 @@ import september2024 from '../assets/blog/september2024.jpg'
 import georgia2025 from '../assets/blog/georgia2025.jpg'
 import mvso2025 from '../assets/blog/mvso2025.jpg'
 import fh2025 from '../assets/blog/fh2025.jpg'
+import Blog from "../blog";
 
 
 
@@ -40,9 +41,9 @@ export function Season2024() {
             <li>Virginia States Tournament (4th): 15 medals</li>
         </ul>
         <h1>Rising Above Struggles</h1>
-        <p>The successes of WSO this season were achieved despite a number of significant setbacks. Most notable was the cancellation of the Fairfax Invitational due to weather. Our members had been gearing up to compete on January 6th, but due to winter weather, all activities in Fairfax County were canceled. As a result, the competition was rescheduled to February 2nd, the date of the Princeton Invitational. This meant that the Regionals teams would have to compete without the States team at Fairfax. However, due to the hard work of our Regionals teams, we ranked 2nd overall at Fairfax. Another conflict was the cancellation of the Carnegie Mellon Invitational. Despite months of preparation, our travel and hotel plans had to be cancelled days before the competition.</p>
+        <p>The successes of WSO this season were achieved despite a number of significant setbacks. Fairfax County canceled extracurricular activities on January 6th, the day of the Fairfax Invitational, despite the following day having now snow. We canceled the Carnegie Mellon two days before we left due to the incoming snowstorm. And on February 2nd, the States and Regionals teams had to compete simultaneously at the Princeton Invitational and the rescheduled Fairfax Invitationals. However, due to the hard work of all teams, we ranked 8th at Princeton and won the 2nd place trophy at Fairfax.</p>
         <h1>Season in Review: President's Remarks</h1>
-        <p>Now that the season has come to a close, I would like to thank everyone on the Science Olympiad team this year for their remarkable dedication and hard work. Our competitors, for working on their notes and builds despite two cancelled competitions. Our officers, for serving their club on top of their difficult events. And Mrs. Babcock, for her ever-present passion and wisdom.</p>
+        <p>Now that the season has come to a close, I would like to thank everyone on the Science Olympiad team this year for their remarkable dedication and hard work. Our students, for working on their notes and builds despite two cancelled competitions. Our officers, for serving their club on top of their difficult events. And Mrs. Babcock, for her ever-present passion and wisdom.</p>
         <p>And of course, I would like to thank our caring and supportive parents. Your commitment as volunteers, chauffeurs, and chaperones is a face of WSO that always deserves more appreciation. I thank you all for providing your children with so many resources that allowed us to succeed, and understanding the cancellations that must have been a logistical nightmare to all households.</p>
         <p>As the departing Vice President and the incoming President, I have to say that I certainly learned a lot this season. I will share those lessons with my officers, States members, and everyone else on the team to make the 2024-2025 season even better than the least. I look forward to a season filled with trophies, medals, and cheers!</p>
     </BlogPage>
@@ -85,7 +86,7 @@ export function Georgia2025() {
         <p>Great job to all WSO competitors! Since the 2022-2023 season, Woodson Science Olympiad has competed in the annual Georgia Scrimmage, a virtual invitational run by Georgia Science Olympiad. Drawing teams from across the nation, the Georgia Scrimmage is one of the earliest competitions and provides experience for study events.</p>
         <p>For this year's Georgia Scrimmage, Woodson Science Olympiad competitors took tests across a three-day period, from Tuesday, November 15th to Thursday, November 17th. During these days, Mrs. Babcock was crowded with exam takers for hours after school, showing the dedication of our members.</p>
         <h1>Performance Review</h1>
-        <p>Woodson Science Olympiad had a strong start to its 2024-2025 season at the Georgia Scrimmage. Pitted against 88 other Division C teams, team Godzilla prevailed, ranking 2nd. This meant Woodson beat 2 other schools that attended the 2023-2024 Nationals Tournament, Marquette University High School and the Fulton Science Academy. Teams Rodan and Mothra ranked 25th and 35th, respectively, a strong showing for the Regionals teams. Individual event rankings were as follows: </p>
+        <p>Woodson Science Olympiad had a strong start to its 2024-2025 season at the Georgia Scrimmage. Pitted against 88 other Division C teams, team Godzilla prevailed, ranking 2nd. This meant Woodson beat 2 other schools that attended the 2023-2024 Nationals Tournament, Marquette University High School and the Fulton Science Academy. Teams Rodan and Mothra ranked 25th and 35th, respectively, a strong showing for the Regionals teams. Individual event medals were as follows: </p>
         <Rankings year={2025} compIndex={0} />
         <p>Build Captain Matthew Lee shared his positive thoughts on the tournament's results. Given how early it is in the season, Lee believed "the studies did really great" and the team had "really exceeded expectations." In regards to Lee's personal event rankings, this Georgia Scrimmage "was my best yet." Looking ahead, Lee said "Our strong team performance gives me an optimistic outlook for the rest of the season."</p>
         <q>Our strong team performance gives me an optimistic outlook for the rest of the season.</q>
@@ -101,7 +102,9 @@ export function Mvso2025() {
         image={mvso2025}
         category="Competition"
     >
+        <p>This was Woodson Science Olympiad's first year competing at the Monta Vista Invitational. Despite being early in the season, we were determined to give our builds a chance to prepare before in-person competitions later in the season. </p>
         <h1>Performance Review</h1>
+        <p>Once again, Woodson stood strong against other nationally-competitive teams, ranking 4th. Most notable was team Godzilla's first place medal in Helicopter, a strong start to an event category that was difficult in previous seasons. However, some difficulties with builds were evident, with Robot Tour placing below expectations (4th) and Electric Vehicle receiving a disqualification. Despite these mishaps, we will continue to prepare for strong performances at other invitationals.</p>
         <Rankings year={2025} compIndex={1} />
     </BlogPage>
 }
@@ -113,8 +116,21 @@ export function FlintHill2025() {
         author="Andrew Kim"
         image={fh2025}
         category="Competition">
+            <p>This was the inaugural competition of the Flint Hill Invitational, and Woodson's first time competing in a fall in-person invitational for many years. </p>
             <h1>Performance Review</h1>
+            <p>Woodson greatly exceeded expectations at the Flint Hill Invitational, ranking 1st above Langley and Lake Braddock's teams. Also notable was the number of medals earned; 29 in total, with 12 of them being 1st place medals. </p>
             <Rankings year={2025} compIndex={2} />
             <p>Once again, we would like to thank Mrs. Babcock, parents, event supervisors, and anyone involved in facilitating our amazing performance at Flint Hill. Our incredible placings would not have been possible without you all!</p>
+    </BlogPage>
+}
+
+export function Fairfax2025() {
+    return <BlogPage
+        title={"2025 Fairfax Invitational Results"}
+        date={"12 January 2025"}
+        author={"Andrew Kim"}
+        image={fh2025}
+        category={"Competition"}>
+            <p>Test</p>
     </BlogPage>
 }
