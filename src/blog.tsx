@@ -39,13 +39,17 @@ const BlogContainer: React.FC<BlogContainerProps> = ({title, date, image, catego
 
 
 function Blog() {
+    document.title = "Blog | Woodson Science Olympiad";
     return <Page title="Our" highlight="Blog" after="" subtitle="Learn about the club and what we do.">
          <div className="primary-section row">
-            <BlogContainer image={fh2025} category="Competitions" title="2025 Flint Hill Invitational Results" date="December 17th, 2024" path="./blog/fh2025" />
-            <BlogContainer image={mvso2025} category="Competitions" title="2025 Monta Vista Invitational Results" date="November 25th, 2024" path="./blog/mvso2025"/>
-            <BlogContainer image={georgia2025} category="Competitions" title="2025 Georgia Scrimmage Results" date="October 24th, 2024" path="./blog/georgia2025"/>
-            <BlogContainer image={september2024} category="Newsletter" title="September 2024 Newsletter" date="September 10, 2024" path="./blog/september2024"/>
-            <BlogContainer image={season2024} category="Blog" title="2023-2024: Season in Review" date="June 12th, 2024" path="./blog/season2024"/>
+             <BlogContainer title={"2025 Mary Washington Regional Results"} date={"March 2nd, 2025"} image={fh2025} category={"Competitions"} path={"./blog/fairfax2025"} />
+             <BlogContainer title={"2025 Princeton Invitational Results"} date={"February 3rd, 2025"} image={fh2025} category={"Competitions"} path={"./blog/fairfax2025"} />
+             <BlogContainer title={"2025 Fairfax Invitational Results"} date={"January 12th, 2025"} image={fh2025} category={"Competitions"} path={"./blog/fairfax2025"} />
+             <BlogContainer image={fh2025} category="Competitions" title="2025 Flint Hill Invitational Results" date="December 17th, 2024" path="./blog/fh2025" />
+             <BlogContainer image={mvso2025} category="Competitions" title="2025 Monta Vista Invitational Results" date="November 25th, 2024" path="./blog/mvso2025"/>
+             <BlogContainer image={georgia2025} category="Competitions" title="2025 Georgia Scrimmage Results" date="October 24th, 2024" path="./blog/georgia2025"/>
+             <BlogContainer image={september2024} category="Newsletter" title="September 2024 Newsletter" date="September 10, 2024" path="./blog/september2024"/>
+             <BlogContainer image={season2024} category="Blog" title="2023-2024: Season in Review" date="June 12th, 2024" path="./blog/season2024"/>
         </div>
     </Page>
 }
