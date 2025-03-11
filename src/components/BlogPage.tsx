@@ -28,6 +28,7 @@ interface BlogProps {
 
 
 const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, category}) => {
+    {document.title = title;}
    return <>
         <Navbar />
 
@@ -39,7 +40,7 @@ const BlogPage: React.FC<BlogProps> = ({children, title, date, author, image, ca
             </div>
             <img src={image} className="blog-image" data-aos="fade-up" data-aos-delay="200" alt={image}/>
         </div>
-        
+
         <div className="blog-body row" data-aos="fade-up">
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                 <div className="detail-label">Date</div>
