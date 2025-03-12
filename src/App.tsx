@@ -31,7 +31,7 @@ import Leadership from './leadership';
 import Contribute from './contribute';
 import Team from './team';
 import Blog from './blog';
-import { Season2024, September2024, Georgia2025, Mvso2025, FlintHill2025 } from './components/Blogs';
+import {Season2024, September2024, Georgia2025, Mvso2025, FlintHill2025, Fairfax2025} from './components/Blogs';
 
 
 // components
@@ -71,6 +71,7 @@ function App() {
                 <Route path="/blog/georgia2025" element={<Georgia2025 />} />
                 <Route path="/blog/mvso2025" element={<Mvso2025 />} />
                 <Route path="/blog/fh2025" element={<FlintHill2025 />} />
+                <Route path={"/blog/fairfax2025"} element={<Fairfax2025 />} />
             </Routes>
         </Router>
     );
